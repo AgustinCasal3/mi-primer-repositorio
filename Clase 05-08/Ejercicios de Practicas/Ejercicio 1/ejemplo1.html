@@ -1,0 +1,48 @@
+<!-- TERMINADO -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Mi Primer Programa JavaScript</title>
+</head>
+<body>
+    <h1>Mi Primer script de JavaScript</h1>
+</body>
+
+<script>
+    console.log(`Hola Mundo desde la consola!`);
+
+    let nombre = `Agustin`;
+    const edad = 19;
+    var ciudad = `Vicente Lopez`;
+
+    let personas = [
+        {
+            nombre: `Agustin`,
+            apellido: `Casal`,
+            edad: 19,
+            ciudad: `Vicente Lopez`,
+            estudiando: true
+        },
+        {
+            nombre: `Gustavo`,
+            apellido: `Casal`,
+            edad: 46,
+            ciudad: `Moron`,
+            estudiando: false
+        },
+        {
+            nombre: `Mateo`,
+            apellido: `Noba`,
+            edad: 19,
+            ciudad: `Munro`,
+            estudiando: true
+        }
+    ]
+
+    console.log('Hola ' + personas[1].nombre + ', tienes ' + personas[1].edad + ' años, vives en ' + personas[1].ciudad);
+
+    console.table(personas, 5);
+</script>
+
+</html>

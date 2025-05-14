@@ -1,0 +1,76 @@
+<!-- TERMINADO -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Calculadora de Edad</title>
+</head>
+<body>
+    <h1>Calculadora de Edad</h1>
+
+    <label for="">Dia de nacimiento</label><br>
+    <input type="number" id="diaNac"><br><br>
+
+    <label for="">Mes de nacimiento</label><br>
+    <input type="number" id="mesNac"><br><br>
+
+    <label for="">Año de nacimiento</label><br>
+    <input type="number" id="nacimiento"><br><br>
+
+    <button id="calcular">Calcular Edad</button>
+    <p id="resultadoEdad"></p>
+</body>
+
+<script>
+    const input = document.getElementById('nacimiento');
+    const dia = document.getElementById('diaNac');
+    const mes = document.getElementById('mesNac');
+    
+    const boton = document.getElementById('calcular');
+    const parrafo = document.getElementById('resultadoEdad');
+
+    let añoActual = new Date().getFullYear();
+    let mesActual = new Date().getMonth() + 1;
+    let diaActual = new Date().getDate();
+
+    function calcularEdad(añoNacimiento, mesNacimiento, diaNacimiento) {
+        console.log(añoNacimiento);
+
+        let edad = 0;
+
+        console.log("año " + añoActual);
+        console.log("mes " + mesActual);
+        console.log("dia " + diaActual);
+
+        edad = añoActual - añoNacimiento;
+
+        if (mesActual < mesNacimiento) {
+            edad--;
+        } else if (mesActual == mesNacimiento) {
+            if (diaActual < diaNacimiento) {
+                edad--;
+            }
+        }
+
+        console.log(edad);
+
+        if (edad <= 0) {
+            parrafo.textContent = `La fecha ingresada no puede ser futura`;
+        } else if (edad > 0 && edad < 120) {
+            parrafo.textContent = `Tu edad es ${edad}`;
+        } else {
+            parrafo.textContent = `La fecha ingresada es demasiado antigua`;
+        }
+
+    }
+
+    boton.addEventListener('click', function() {
+        let añoNacimiento = input.value;
+        let mesNacimiento = mes.value;
+        let diaNacimiento = dia.value;
+
+        calcularEdad(añoNacimiento, mesNacimiento, diaNacimiento);
+    });
+</script>
+
+</html>

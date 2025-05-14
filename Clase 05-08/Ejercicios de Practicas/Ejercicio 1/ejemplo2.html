@@ -1,0 +1,77 @@
+<!-- TERMINADO -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Interaccion con JavaScript</title>
+</head>
+<body>
+    <h1>Interaccion con JavaScript</h1>
+    <button id="miBoton">Haz click aqui</button>
+    <button id="miBoton2">Haz click aqui!</button>
+    <button id="miBoton3">Haz click aqui?</button>
+    <button id="miBoton4">Restablecer</button>
+    <p id="resultado">Esperando clic...</p>
+
+    <p id="contador"></p>
+</body>
+
+<script>
+    const boton = document.getElementById('miBoton');
+    const boton2 = document.getElementById('miBoton2');
+    const boton3 = document.getElementById('miBoton3');
+    const boton4 = document.getElementById('miBoton4');
+    const parrafo = document.getElementById('resultado');
+    const pContador = document.getElementById('contador');
+
+    let contador = 0;
+
+    boton.addEventListener("click", function() {
+        parrafo.textContent = '¡Haz hecho click en el boton!';
+        
+        parrafo.style.color = 'blue';
+        parrafo.style.fontWeight = 'bold';
+        parrafo.style.fontStyle = 'normal';
+
+        contador++;
+        pContador.textContent = `Haz hecho click ${contador} veces!`;
+    });
+
+    boton2.addEventListener("click", function() {
+        parrafo.textContent = '¡Haz hecho click en el boton!';
+        
+        parrafo.style.color = 'green';
+        parrafo.style.fontWeight = 'normal';
+        parrafo.style.fontStyle = 'italic';
+
+        contador++;
+        pContador.textContent = `Haz hecho click ${contador} veces!`;
+    });
+
+    boton3.addEventListener("click", function() {
+        parrafo.textContent = '¡Haz hecho click en el boton!';
+        
+        parrafo.style.color = 'red';
+        parrafo.style.fontWeight = 'bolder';
+        parrafo.style.fontStyle = 'normal';
+
+        contador++;
+        pContador.textContent = `Haz hecho click ${contador} veces!`;
+    });
+    
+    boton4.addEventListener("click", function() {
+        parrafo.textContent = '¡Haz hecho click en el boton!';
+        
+        parrafo.style.color = 'black';
+        parrafo.style.fontWeight = 'normal';
+        parrafo.style.fontStyle = 'normal';
+
+        contador++;
+        pContador.textContent = `Haz hecho click ${contador} veces!`;
+    });
+
+
+
+</script>
+
+</html>
