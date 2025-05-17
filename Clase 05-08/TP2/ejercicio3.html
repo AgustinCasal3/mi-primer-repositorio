@@ -1,0 +1,175 @@
+<!-- Realizar un programa que permita el ingreso de 10 valores. Luego, presentar un menú
+con dos opciones: 1 - Buscar menor; 2 - Buscar mayor. Según la opción seleccionada por el
+usuario, debe devolver el menor o mayor de ese conjunto de valores. -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <h1>Ejercicio 3: Mayor o menor</h1>
+
+    <h3>Ingresar Numeros</h3>
+
+    <p>Aqui podras ingresar un maximo de 10 numeros y saber cual es el mayor o el menor.</p>
+
+    <table>
+        <tr>
+            <td>
+                <!-- <p>1</p> -->
+                <input type="number" id="num1">
+            </td>
+            <td>
+                <!-- <p>2</p> -->
+                <input type="number" id="num2">
+            </td>
+            <td>
+                <!-- <p>3</p> -->
+                <input type="number" id="num3">
+            </td>
+            <td>
+                <!-- <p>4</p> -->
+                <input type="number" id="num4">
+            </td>
+            <td>
+                <!-- <p>5</p> -->
+                <input type="number" id="num5">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <!-- <p>6</p> -->
+                <input type="number" id="num6">
+            </td>
+            <td>
+                <!-- <p>7</p> -->
+                <input type="number" id="num7">
+            </td>
+            <td>
+                <!-- <p>8</p> -->
+                <input type="number" id="num8">
+            </td>
+            <td>
+                <!-- <p>9</p> -->
+                <input type="number" id="num9">
+            </td>
+            <td>
+                <!-- <p>10</p> -->
+                <input type="number" id="num10">
+            </td>
+        </tr>
+    </table>
+
+    <br>
+
+    <button id="mayor">Conseguir Mayor</button>
+    <button id="menor">Conseguir Menor</button>
+    
+    <h2 id="resultado"></h2>
+
+    <button id="restablecer">Restablecer</button>
+</body>
+
+<script>
+
+    let mayor = document.getElementById("mayor");
+    let menor = document.getElementById("menor");
+    let restablecer = document.getElementById("restablecer");
+
+    let array = [];
+
+    function conseguirNumeros() {
+        array = [];
+
+        let num1 = document.getElementById("num1").value;
+        array.push(num1);
+        let num2 = document.getElementById("num2").value;
+        array.push(num2);
+        let num3 = document.getElementById("num3").value;
+        array.push(num3);
+        let num4 = document.getElementById("num4").value;
+        array.push(num4);
+        let num5 = document.getElementById("num5").value;
+        array.push(num5);
+        let num6 = document.getElementById("num6").value;
+        array.push(num6);
+        let num7 = document.getElementById("num7").value;
+        array.push(num7);
+        let num8 = document.getElementById("num8").value;
+        array.push(num8);
+        let num9 = document.getElementById("num9").value;
+        array.push(num9);
+        let num10 = document.getElementById("num10").value;
+        array.push(num10);
+
+        console.log(array);
+    }
+
+    function conseguirMayor() {
+        let x;
+
+        for (let i = 0; i < array.length; i++) {
+            for (let y = 0; y < array.length; y++) {
+                if (array[y] < array[i]) {
+                    x = array[i];
+                    array[i] = array[y];
+                    array[y] = x;
+
+                    console.log(array[y], array[i]);
+                }
+            }
+        }
+
+        console.log(array);
+    }
+
+    function conseguirMenor() {
+        let men;
+
+        for (let i = 0; i < array.length; i++) {
+            for (let y = 0; y < array.length; y++) {
+                if (array[y] > array[i]) {
+                    men = array[i];
+                    array[i] = array[y];
+                    array[y] = men;
+
+                    console.log(array[y], array[i]);
+                }
+            }
+        }
+
+        console.log(array);
+    }
+
+    mayor.addEventListener("click", function() {
+        conseguirNumeros();
+        conseguirMayor();
+
+        document.getElementById("resultado").textContent = array[0];
+    });
+
+    menor.addEventListener("click", function() {
+        conseguirNumeros();
+        conseguirMenor();
+
+        document.getElementById("resultado").textContent = array[0];
+    });
+
+    restablecer.addEventListener("click", function() {
+        document.getElementById("num1").value = "";
+        document.getElementById("num2").value = "";
+        document.getElementById("num3").value = "";
+        document.getElementById("num4").value = "";
+        document.getElementById("num5").value = "";
+        document.getElementById("num6").value = "";
+        document.getElementById("num7").value = "";
+        document.getElementById("num8").value = "";
+        document.getElementById("num9").value = "";
+        document.getElementById("num10").value = "";
+
+        document.getElementById("resultado").textContent = "";
+    });
+
+</script>
+</html>

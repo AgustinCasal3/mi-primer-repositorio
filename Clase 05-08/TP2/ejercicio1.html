@@ -1,0 +1,85 @@
+<!-- Hacé un programa que realice verificación de identidad. El programa deberá pedir una
+clave al usuario y este tendrá tres oportunidades para poner la clave correcta. a) Si el
+usuario pone la clave incorrecta 3 veces, se deberá imprimir “Acceso denegado”. b) Si puso
+la clave mal, pero todavía le quedan oportunidades, imprimir “Vuelva a ingresar la clave”. c)
+Si se ingresó la clave correcta, imprimir “Acceso otorgado”. -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <h1>Ejercicio 1: Verificacion de Identidad</h1>
+
+    <h3>Ingreso de datos</h3>
+
+    <p>Usuario</p>
+    <input type="text" id="user">
+
+    <p>Contraseña</p>
+    <input type="text" id="pass"><br><br>
+
+    <button id="ingreso">Ingresar</button>
+
+    <h3 id="resultado"></h3>
+    <img src="./correcto.png" alt="" style="height: 200px;display: none;" id="correcto">
+    <h4 id="intentos"></h4>
+
+    <button id="restablecer">Restablecer</button>
+</body>
+
+<script>
+    let ingreso = document.getElementById("ingreso");
+    let restablecer = document.getElementById("restablecer");
+
+    let user = document.getElementById("user");
+    let pass = document.getElementById("pass");
+
+    let resultado = document.getElementById("resultado");
+    let intentos = document.getElementById("intentos");
+    let intentosRestantes = 3;
+
+    let correcto = document.getElementById("correcto");
+
+    let userCorrecto = "Agustin";
+    let passCorrecto = "juanjose";
+
+    function verificacion() {
+        if (user.value == userCorrecto && pass.value == passCorrecto) {
+            resultado.textContent = "Ingreso correcto";
+            intentos.textContent = "";
+            correcto.style.display = "block";
+        } else {
+            mal();
+        }
+    }
+
+    function mal() {
+        intentosRestantes--;
+        correcto.style.display = "none";
+
+        if (intentosRestantes > 0) {
+            intentos.textContent = `Intentos restantes: ${intentosRestantes}`;
+        } else {
+            intentos.textContent = `No quedan intentos restantes`;
+            ingreso.style.display = "none";
+        }
+    }
+
+    ingreso.addEventListener("click", function () {
+        verificacion();
+    });
+
+    restablecer.addEventListener("click", function () {
+        user.value = "";
+        pass.value = "";
+        resultado.textContent = "";
+        correcto.style.display = "none";
+        intentos.textContent = "";
+        ingreso.style.display = "block";
+
+        intentosRestantes = 3;
+    });
+</script>
+</html>
