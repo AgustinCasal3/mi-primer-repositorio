@@ -50,6 +50,8 @@ Si se ingresó la clave correcta, imprimir “Acceso otorgado”. -->
             resultado.textContent = "Ingreso correcto";
             intentos.textContent = "";
             correcto.style.display = "block";
+            user.disabled = true;
+            pass.disabled = true;
         } else {
             mal();
         }
@@ -60,9 +62,11 @@ Si se ingresó la clave correcta, imprimir “Acceso otorgado”. -->
         correcto.style.display = "none";
 
         if (intentosRestantes > 0) {
-            intentos.textContent = `Intentos restantes: ${intentosRestantes}`;
+            intentos.textContent = `Incorrecto. Intentos restantes: ${intentosRestantes}`;
         } else {
             intentos.textContent = `No quedan intentos restantes`;
+            user.disabled = true;
+            pass.disabled = true;
             ingreso.style.display = "none";
         }
     }
