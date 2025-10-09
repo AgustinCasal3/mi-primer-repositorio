@@ -4,3 +4,24 @@
 
   font-family: Arial, Helvetica, sans-serif;
 }
+
+body {
+  display: flex;
+  width: 100vw;
+  height: auto;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 2.5vh;
+
+  background-color: antiquewhite;
+}
+
+.contenido {
+    display: inline-block;
+}
+
+.contenido h1 {
+  text-align: center;
+}
