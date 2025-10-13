@@ -3,6 +3,15 @@
     padding: 0;
 }
 
+.producto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: auto;
+}
+
 .contenedor {
     display: inline-block;
     width: auto;
@@ -12,7 +21,7 @@
     border: 1px solid black;
     border-radius: 1vh;
 
-    margin: 2.5vh;
+    margin: 2.5vh 0;
 
     background-color: white;
     filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.25));
@@ -22,7 +31,6 @@
 .contenedor:hover {
     transform: scale(1.025);
     transition: 0.5s;
-    cursor: pointer;
 }
 
 .img img {
@@ -72,4 +80,28 @@
     background-color: rgb(255, 170, 170);
     border: 2px solid rgb(230, 113, 113);
     border-radius: 0.75em;
+}
+
+.divContador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    margin: 1vh 0 2vh;
+
+    width: 100%;
+    height: auto;
+}
+
+button {
+    width: 5vh;
+    height: 5vh;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+.divContador p {
+    margin: 0 2vh;
 }

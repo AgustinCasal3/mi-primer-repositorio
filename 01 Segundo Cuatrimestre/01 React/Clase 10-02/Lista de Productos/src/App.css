@@ -7,21 +7,23 @@
 
 body {
   display: flex;
-  width: 100vw;
+  width: 100%;
   height: auto;
 
   align-items: center;
   justify-content: center;
-
-  padding: 2.5vh;
+  
+  margin: 2.5vh 0;
 
   background-color: antiquewhite;
 }
 
 .contenido {
     display: inline-block;
+    width: 50vh;
 }
 
-.contenido h1 {
+h1 {
   text-align: center;
+  width: 50vh;
 }
