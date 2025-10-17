@@ -1,3 +1,5 @@
+import './FormularioInscripcion.css'
+
 import React, { useEffect, useState } from 'react'
 
 import { Boton } from './BotonSubmit'
@@ -12,7 +14,7 @@ export function Formulario() {
 
     const [telefono, setTelefono] = useState('');
     
-    const [mensajeExito, setMensajeExito] = useState('');
+    const [mensajeExito, setMensajeExito] = useState(false);
 
     useEffect(() => {
         if (mensajeExito) {
@@ -23,37 +25,40 @@ export function Formulario() {
     }, [mensajeExito]);
 
     function handleReset() {
+        setMensajeExito(false);
+
         setNombre('');
         setApellido('');
         setEmail('');
         setTelefono('');
-
-        // value=''
     }
 
     function handleSubmit(e: React.FormEvent) {
         e.preventDefault();
 
-
         if (nombre == '' || apellido == '' || email == '' || telefono == '' ) {
             alert('Por favor, completa todos los campos.');
-            setMensajeExito('');
+            setMensajeExito(false);
         } else {
-            setMensajeExito('Exito');
-            handleReset();
+            setMensajeExito(true);
         }
-
-
     }
 
     return (
         <>
-            <Input label='nombre' type='text' placeholder='Ingrese su Nombre' onChange={(e) => setNombre(e.target.value)} ></Input>
-            <Input label='Apellido' type='text' placeholder='Ingrese su Apellido' onChange={(e) => setApellido(e.target.value)} ></Input>
-            <Input label='Email' type='email' placeholder='ejemplo@email.com' onChange={(e) => setEmail(e.target.value)} ></Input>
-            <Input label='Telefono' type='tel' placeholder='1234567890' onChange={(e) => setTelefono(e.target.value)} ></Input>
+            <div className="contenedorForm">
+                <form onSubmit={handleSubmit}>
+                    <Input label='Nombre' type='text' value={nombre} placeholder='Ingrese su Nombre' onChange={(e) => setNombre(e.target.value)} ></Input>
+                    <Input label='Apellido' type='text' value={apellido} placeholder='Ingrese su Apellido' onChange={(e) => setApellido(e.target.value)} ></Input>
+                    <Input label='Email' type='email' value={email} placeholder='ejemplo@email.com' onChange={(e) => setEmail(e.target.value)} ></Input>
+                    <Input label='Telefono' type='tel' value={telefono} placeholder='1234567890' onChange={(e) => setTelefono(e.target.value)} ></Input>
 
-            <Boton texto="Aceptar" onClick={handleSubmit} />
+                    <Boton texto="Aceptar" type='submit' onClick={handleSubmit} />
+
+                    <Boton texto="Nueva Inscripcion" type='button' onClick={handleReset} />
+                </form>
+
+            </div>
         </>
     )
 }
