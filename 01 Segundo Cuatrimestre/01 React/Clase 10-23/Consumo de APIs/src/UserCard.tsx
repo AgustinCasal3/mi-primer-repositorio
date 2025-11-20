@@ -1,21 +1,24 @@
 import './UserCard.css'
 
 interface UserCardProps {
-    name: string,
-    email: string,
-    phone: string,
-    website: string
+    name: string;
+    email: string;
+    phone: string;
+    website: string;
+    company: string;
+    address: string;
 }
 
-export function UserCard(props: UserCardProps) {
+export function UserCard({ name, email, phone, website, company, address }: UserCardProps) {
     return (
-        <>
         <div className="userCard">
-            <h3>{props.name}</h3>
-            <p>{props.email}</p>
-            <p>{props.phone}</p>
-            <p>{props.website}</p>
+            <h3>{name}</h3>
+            <p><strong>Email:</strong> {email}</p>
+            <p><strong>Teléfono:</strong> {phone}</p>
+            <p><strong>Website:</strong> {website}</p>
+
+            <p><strong>Empresa:</strong> {company}</p>
+            <p><strong>Dirección:</strong> {address}</p>
         </div>
-        </>
-    )
+    );
 }

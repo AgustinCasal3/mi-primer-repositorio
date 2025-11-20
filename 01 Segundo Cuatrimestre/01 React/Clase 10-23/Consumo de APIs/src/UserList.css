@@ -10,3 +10,77 @@
 .userList h2 {
     margin: 1vh;
 }
+
+.reloadButton button{
+    padding: 2vh 2.5vh;
+    border-radius: 1.5vh;
+    border: none;
+    background-color: #4a90e2;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.reloadButton button:hover {
+    background-color: #357ac9;
+}
+
+.searchInput {
+    padding: 2vh;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 1.5vh;
+    border: 1px solid #ccc;
+
+    margin: 0 2.5vh 0 0;
+}
+
+.busquedaUsuarios {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paginacion {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paginacion span {
+    font-size: 1.5em;
+
+    margin: 0 2vh;
+}
+
+.paginacion button {
+    border: none;
+    background-color: #4a90e2;
+
+    color: white;
+
+    font-size: 2em;
+
+    width: 5vh;
+    height: 5vh;
+    border-radius: 1vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: monospace;
+}
+
+.paginacion button:hover {
+    background-color: #4486d1;
+    cursor: pointer;
+}
+
+.paginacion button:active {
+    background-color: #3d78bb;
+}

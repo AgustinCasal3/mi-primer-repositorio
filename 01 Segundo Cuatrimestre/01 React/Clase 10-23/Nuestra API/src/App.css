@@ -13,5 +13,6 @@ body h1 {
   padding: 2.5vh;
 
   text-align: center;
-  text-decoration: underline;
+
+  user-select: none;
 }
