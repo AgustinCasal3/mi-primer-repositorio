@@ -1,0 +1,4586 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)http://192.168.0.40:5173/verify/388e53c7cbc45caedfd9b5744be3ff632ad90692191e7bf1 -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="module">import { injectIntoGlobalHook } from "/@react-refresh";
+injectIntoGlobalHook(window);
+window.$RefreshReg$ = () => {};
+window.$RefreshSig$ = () => (type) => type;</script>
+
+    <script type="module" src="./Fate_Umbrella.ver_files/client"></script>
+
+    
+    <link rel="icon" type="image/svg+xml" href="http://192.168.0.40:5173/imgs/Home/Titulo/Icono.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fate/Umbrella.ver</title>
+  <style type="text/css" data-vite-dev-id="D:/Escritorio/Fate-Umbrella.ver/0 Fate Umbrella.ver Web/Fate Umbrella.ver/src/index.css"></style><style type="text/css" data-vite-dev-id="D:/Escritorio/Fate-Umbrella.ver/0 Fate Umbrella.ver Web/Fate Umbrella.ver/src/App.css">* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.contenedorPlaceholder {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.botonesPlaceholder a {
+  display: block;
+
+  width: 30vh;
+  height: 5vh;
+
+  font-size: 2em;
+  text-align: center;
+  text-decoration: none;
+
+  color: black;
+  
+  padding: 1.5vh;
+  margin: 2vh 2.5vh;
+
+  border: 1px solid black;
+  border-radius: 1vh;
+
+  transition: 0.15s;
+}
+
+.botonesPlaceholder a:hover {
+  background-color: gainsboro;
+}</style><style type="text/css" data-vite-dev-id="D:/Escritorio/Fate-Umbrella.ver/0 Fate Umbrella.ver Web/Fate Umbrella.ver/src/instances/01 home/Home.css">@import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.contenedorHome {
+    width: 100%;
+    height: auto;
+    
+    background-image: url(/imgs/Home/FondoRepeat.png);
+    background-size: 50px;
+    background-repeat: repeat;
+    background-position: center;
+}</style><style type="text/css" data-vite-dev-id="D:/Escritorio/Fate-Umbrella.ver/0 Fate Umbrella.ver Web/Fate Umbrella.ver/src/instances/0 header/Header.css">@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Viaoda+Libre&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+header {
+    user-select: none;
+
+    width: 100%;
+    height: 7.5vh;
+
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url(/imgs/Header/Fondo.png);
+    background-position: bottom;
+    background-size: cover;
+
+    background-blend-mode: multiply; /* o overlay, soft-light, etc. */
+
+    z-index: 999;
+
+    position: fixed;
+
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+}
+.contenedorHeaderDesktop {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.links a {
+    margin: 0 1.25vh;
+
+    color: rgb(226, 218, 173);
+
+    text-decoration: none;
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3em;
+
+    filter: drop-shadow(0px 2px 0px rgba(0, 0, 0, 0.318));
+
+    transition: 0.15s;
+}
+.links a:hover {
+    cursor: pointer;
+    color: rgb(208, 199, 152);
+    filter: drop-shadow(0px 2px 0px rgba(0, 0, 0, 0.318)) drop-shadow(0px 0px 3px rgba(255, 226, 84, 0.447));
+}
+.logo img {
+    width: auto;
+    height: 5vh;
+
+    margin: 0 5vh;
+
+    filter: drop-shadow(0px 2px 0px rgba(0, 0, 0, 0.318));
+}
+/* ESPACIADOR */
+.espaciadorHeader {
+    width: 100%;
+    height: 7.5vh;
+}
+.contenedorHeaderMobile {
+    display: none;
+}
+.menuDesplegable {
+    display: none;
+}
+@media (orientation: portrait) {
+    .contenedorHeaderDesktop {
+        display: none;
+    }
+
+    header {
+        width: 100vw;
+    }
+    
+    .contenedorHeaderMobile {
+        height: 7.5vh;
+        width: 100vw;
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logoJuegoMobile {
+        user-select: none;
+
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logoJuegoMobile img {
+        height: 5vh;
+        margin-bottom: 0.5vh;
+        margin-left: 3.5vw;
+
+        filter: drop-shadow(0px 1px 0px rgba(0, 0, 0, 0.318)) drop-shadow(0px 0px 1vh rgba(0, 0, 0, 0.25));
+    }
+    
+    .menuHamburguesa {
+        height: 3.5vh;
+        width: 3.5vh;
+        margin-bottom: 0.5vh;
+        margin-right: 3.5vw;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        cursor: pointer;
+        transition: transform 0.3s ease;
+
+        filter: drop-shadow(0px 2px 0px rgba(0, 0, 0, 0.318)) drop-shadow(0px 0px 1vh rgba(0, 0, 0, 0.25));
+    }
+
+    .menuHamburguesa:active {
+        transform: scale(0.9);
+    }
+
+    .borgir {
+        background-image: url(/imgs/Header/Mobile/Hambuerger.png);
+    }
+
+    .equis {
+        background-image: url(/imgs/Header/Mobile/Equis.png);
+    }
+
+    /* MENÚ DESPLEGABLE */
+    .menuDesplegable {
+        position: fixed;
+        top: 7.5vh;
+        left: 0;
+        width: 150vw;
+        height: calc(100vh - 7.5vh);
+        
+        background-color: rgba(0, 0, 0, 0.25);
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 20%);
+        backdrop-filter: blur(10px);
+        
+        transform: translateX(150vw);
+        transition: transform 0.5s ease-in-out;
+
+        display: flex;
+        justify-content: right;
+        
+        z-index: 999;
+        overflow-y: auto;
+    }
+
+    .menuDesplegable.abierto {
+        transform: translateX(-50vw);
+    }
+
+    .linksMobile {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: right;
+
+        gap: 3vh;
+        padding: 3vh 0;
+        height: auto;
+        width: 100vw;
+
+        overflow: hidden;
+    }
+
+    .linksMobile a {
+        user-select: none;
+
+        width: 100%;
+        height: 7.5vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: right;
+
+        transition: all 0.3s ease;
+        text-align: right;
+        width: 80vw;
+
+        background-image: url(/imgs/Header/Mobile/FondoA.png);
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        padding-right: 5vh;
+
+        color: rgb(226, 218, 173);
+
+        text-decoration: none;
+        font-family: "Crimson Text", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 3vh;
+
+        filter: drop-shadow(0px 2px 0px rgba(0, 0, 0, 0.318)) drop-shadow(0px 0px 1vh rgba(0, 0, 0, 0.5));
+        text-shadow: 
+            0px 2px 0px rgba(0, 0, 0, 0.318),
+            0px 0px 1vh rgba(0, 0, 0, 0.75);
+
+        /* Estado inicial: invisible y desplazado */
+        opacity: 0;
+        transform: translateX(15vw);
+    }
+
+    /* Animación cuando el menú está abierto */
+    .linksMobile a.aparecer {
+        animation: deslizarEntrada 0.5s ease-out forwards;
+    }
+
+    @keyframes deslizarEntrada {
+        from {
+            opacity: 0;
+            transform: translateX(15vw);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(5vw);
+        }
+    }
+
+    .linksMobile a:hover,
+    .linksMobile a:active {
+        transform: translateX(0);
+    }
+}</style><style type="text/css" data-vite-dev-id="D:/Escritorio/Fate-Umbrella.ver/0 Fate Umbrella.ver Web/Fate Umbrella.ver/src/instances/0 footer/Footer.css">* {
+    margin: 0;
+    padding: 0;
+}
+
+.contenedorFooter {
+    display: flex;
+
+    align-content: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 35vh;
+
+    padding-top: 5px;
+
+    background-image: url(/imgs/Footer/Fondo.png);
+    background-size: cover;
+    background-position: top;
+
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+}
+
+.devs {
+    width: 25vw;
+    height: 35vh;
+
+    margin-left: 10vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.dev {
+    margin: 2.5vh 0;
+
+    height: 10vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.dev a {
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.dev a:hover {
+    color: rgb(208, 199, 152);
+    filter: drop-shadow(0px 2px 0px rgba(0, 0, 0, 0.318)) drop-shadow(0px 0px 3px rgba(255, 226, 84, 0.447));
+}
+
+.devImg {
+    display: flex;
+
+    height: 10vh;
+    width: 10vh;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.devImg img {
+    user-select: none;
+
+    border-radius: 50%;
+
+    filter: drop-shadow(0px 2px 0px rgba(0, 0, 0, 0.318)) drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.447));
+
+    width: 10vh;
+    height: 10vh;
+}
+
+.devText p {
+    user-select: none;
+
+    margin: 0.75vh 0;
+    margin-left: 2.5vh;
+
+    display: block;
+
+    color: rgb(226, 218, 173);
+
+    text-decoration: none;
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4vh;
+
+    filter: drop-shadow(0px 2px 0px rgba(0, 0, 0, 0.318)) drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.447));
+
+    transition: 0.15s;
+}
+
+.copyright {
+    width: auto;
+    height: 35vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copyImg {
+    display: flex;
+    
+    height: 20vh;
+    width: 100%;
+    
+    align-items: center;
+    justify-content: center;
+    
+    margin: 2.5vh 0;
+}
+
+.copyImg img {
+    user-select: none;
+
+    width: auto;
+    height: 100%;
+
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.35));
+
+    transition: 0.25s;
+}
+
+.copyImg img:hover {
+    transform: scale(1.025);
+}
+
+.copyText {
+    margin: 2.5vh 0;
+}
+
+.copyText p {
+    text-align: center;
+
+    user-select: none;
+
+    display: block;
+
+    color: rgb(226, 218, 173);
+
+    text-decoration: none;
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5vh;
+
+    filter: drop-shadow(0px 2px 0px rgba(0, 0, 0, 0.318)) drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.447));
+
+    transition: 0.15s;
+}
+
+.legal {
+    
+    height: 35vh;
+    width: 25vw;
+    
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+    margin-right: 10vh;
+}
+
+.legalText a, .legalText p {
+    text-align: right;
+
+    user-select: none;
+
+    margin: 0.75vh 0;
+
+    display: block;
+
+    color: rgb(226, 218, 173);
+
+    text-decoration: none;
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3em;
+
+    filter: drop-shadow(0px 2px 0px rgba(0, 0, 0, 0.318));
+
+    transition: 0.15s;
+}
+
+.legalText a:hover {
+    color: rgb(208, 199, 152);
+    filter: drop-shadow(0px 2px 0px rgba(0, 0, 0, 0.318)) drop-shadow(0px 0px 3px rgba(255, 226, 84, 0.447));
+}
+
+@media (orientation: portrait) {
+
+    .contenedorFooter {
+        height: auto;
+        padding-top: 8px;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* --- DEVS --- */
+    .devs {
+        width: 100%;
+        height: auto;
+        
+        margin: 5vh 0 0 0;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .contenedorDevs {
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        gap: 5vh;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dev {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        margin: 0;
+    }
+
+    .devImg {
+        width: 10vh;
+        height: 10vh;
+    }
+
+    .devImg img {
+        width: 10vh;
+        height: 10vh;
+    }
+
+    .devText p {
+        width: 10vh;
+
+        margin: 0;
+        font-size: 2.2vh;
+        text-align: center;
+    }
+
+    /* --- COPYRIGHT --- */
+    .copyright {
+        width: 100%;
+        height: auto;
+        margin: 5vh 0;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .contenedorCopyright {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .copyImg {
+        margin: 0;
+        margin-bottom: 2.5vh;
+
+        height: auto;
+        width: auto;
+    }
+
+    .copyImg img {
+        height: 12vh;
+        width: auto;
+        margin: 0;
+    }
+
+    .copyText {
+        margin: 0;
+    }
+
+    .copyText p {
+        font-size: 2vh;
+    }
+
+    /* --- LEGAL --- */
+    .legal {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        margin-bottom: 5vh;
+
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .legalText a,
+    .legalText p {
+        text-align: center;
+        font-size: 2.2vh;
+    }
+
+    
+}</style><style type="text/css" data-vite-dev-id="D:/Escritorio/Fate-Umbrella.ver/0 Fate Umbrella.ver Web/Fate Umbrella.ver/src/instances/01 home/components/01 titulo/Titulo.css">/* TITULO */
+
+.titulo {
+    width: 100%;
+    height: 92.5vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url(../../../imgs/Home/Titulo/Titulo_Background.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.tituloImg {
+    max-height: 40vh;
+    width: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.5s ease;
+}
+
+.tituloImg img {
+    user-select: none;
+    
+    max-height: 40vh;
+    width: auto;
+    max-width: 90vw;
+}
+
+.tituloTexto h2 {
+    transition: 0.5s ease;
+    
+    user-select: none;
+    
+    text-align: center;
+    font-size: 2em;
+    
+    margin: 7.5vh 0 ;
+    
+    color: white;
+    
+    font-family: "Quintessential", serif;
+    font-weight: 400;
+    font-style: normal;
+    
+    filter: drop-shadow(0px 0px 10px black);
+    
+    text-shadow:
+    1px 1px 0 black,
+        -1px 1px 0 black,
+        1px -1px 0 black,
+        -1px -1px 0 black,
+        0 1px 0 black,
+        1px 0 0 black,
+        0 -1px 0 black,
+        -1px 0 0 black;
+
+}
+
+.tituloButton {
+    width: auto;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tituloButton a {
+    color: rgb(49, 41, 12);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2vh;
+
+    background: linear-gradient(135deg, #ffd700, #ffbe19, #fff3b0);
+    background-size: 200%;
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.4);
+
+    padding: 2vh 7vh;
+
+    border: 1px solid goldenrod;
+    border-radius: 5vh;
+
+    transition: background-position 0.6s ease, transform 0.3s, border 0.3s;
+}
+
+.tituloButton a:hover {
+    box-shadow: 0 4px 10px rgba(139, 119, 0, 0.575);
+    border: 1px solid rgb(255, 225, 119);
+    
+    transform: scale(1.025);
+
+    background-position: right center;
+}
+
+@keyframes flotacion {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-5px); }  /* Sube */
+  100% { transform: translateY(0px); }   /* Baja */
+}
+
+/* Aplicación a elementos */
+.flotando {
+  animation: flotacion 5s ease-in-out infinite;
+}
+
+@media (orientation: portrait) {
+    .tituloTexto h2 {
+        font-size: 2.75vh;
+        padding: 0 5vh;
+        margin: 5vh 0;
+    }
+}</style><style type="text/css" data-vite-dev-id="D:/Escritorio/Fate-Umbrella.ver/0 Fate Umbrella.ver Web/Fate Umbrella.ver/src/instances/01 home/components/02 personajes/Personajes.css">/* PERSONAJES */
+
+.personajes {
+    width: 100%;
+    height: auto;
+
+    border-top: 1px solid lightgray;
+}
+
+.fichaPersonaje {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+    background: linear-gradient(175deg, 
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 20%, 
+    rgb(0, 0, 0) 20%, 
+    rgb(0, 0, 0) 20.5%, 
+    rgba(255, 255, 255, 0) 20.5%, 
+    rgba(255, 255, 255, 0) 79.5%, 
+    rgb(0, 0, 0) 79.5%,
+    rgb(0, 0, 0) 80%,
+    rgba(255, 255, 255, 0) 80%);
+}
+
+.flecha {
+    width: 3vw;
+    margin: 0 1vw;
+}
+
+.flecha a {
+    width: 3vw;
+}
+
+.flecha a img {
+    width: 3vw;
+}
+
+.flechaIzquierda {
+    transform: scaleX(-1);
+}
+
+.personaje {
+    width: 100%;
+    height: auto;
+    
+    margin: 10vh 0;
+
+    
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.personajeInfo {
+    width: auto;
+    height: 100%;
+}
+
+.personajeNombre h1 {
+    text-align: center;
+    background-color: white;
+    background: linear-gradient(90deg, 
+    rgba(255, 255, 255, 0) 0%,
+    rgb(255, 255, 255) 10%, 
+    rgba(255, 255, 255, 1) 90%,
+    rgba(255, 255, 255, 0) 100%);
+
+    transform: rotate(355deg);
+
+    width: 130%;
+
+    font-size: 5em;
+    margin: 2vh auto;
+}
+
+.personajeTexto {
+    margin-left: 15vw;
+    margin-top: 14vh;
+}
+
+.personajeTexto p {
+    font-size: 1.2em;
+    text-align: left;
+    margin: 1.5vh 0;
+}
+
+.personajeImagen {
+  position: relative;
+  display: inline-block;
+  overflow: visible; /* por si acaso */
+
+  margin-right: 10vw;
+}
+
+.personajeImagen::after {
+  content: "";
+  position: absolute;
+  top: 63.5%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  background: url("../../../imgs/Home/Servants/Edmond.png") no-repeat center top / 100% auto;
+  transform: scaleY(-0.3);
+  opacity: 0.3;
+  filter: blur(2px);
+  mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+
+
+.personajeImagen img {
+    height: 70vh;
+}
+
+.seleccionClase {
+    width: 100%;
+    height: 20vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-top: 2px solid rgb(214, 198, 133);
+    border-bottom: 2px solid rgb(214, 198, 133);
+
+    background-image: url(../../../imgs/Home/FateSeries/fondo.png);
+    background-size: cover;
+    background-position: center;
+
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
+}
+
+.seleccionClase a {
+/* les falta un logo al principio del boton */
+
+    user-select: none;
+
+    z-index: 1;
+
+    height: 7.5vh;
+    width: 15vw;
+
+    margin: 0 3vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.5em;
+    text-decoration: none;
+    color: black;
+
+    background-color: rgb(255, 243, 196);
+
+    border: 2px solid rgb(203, 187, 121);
+    border-radius: 2.5vh;
+
+    transition: 0.3s ease;
+}
+
+.seleccionClase a:hover {
+    filter: drop-shadow( 0px 7px 2px rgba(0, 0, 0, 0.128));
+    cursor: pointer;
+    transform: translateY(-7px);
+}
+
+@media (orientation: portrait) {
+    .personajeNombre h1 {
+        width: 100%;
+        transform: rotate(0);
+    }
+
+    .personajeImagen img {
+        display: none;
+    }
+}</style><style type="text/css" data-vite-dev-id="D:/Escritorio/Fate-Umbrella.ver/0 Fate Umbrella.ver Web/Fate Umbrella.ver/src/instances/01 home/components/03 trailer/Trailer.css">/* TRAILER */
+
+.trailer {
+    width: 100%;
+    height: auto;
+
+    padding: 5vh 0;
+}
+
+.trailerTitulo {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.trailerTitulo h1 {
+    font-family: "Quintessential", serif;
+    
+    font-size: 4.25vh;
+    text-align: center;
+
+    margin-bottom: 2vh;
+}
+
+.trailerVideo {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botonPlay {
+    width: 64vw;
+    height: 36vw;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url(../../../imgs/Home/Trailer/FondoTrailer.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    border: 1px solid black;
+}
+
+.trailerTexto {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+.trailerTexto h2 {
+    font-family: "Quintessential", serif;
+
+    font-size: 3vh;
+    text-align: center;
+
+    padding: 0 2.5vh;
+
+    margin-top: 2vh;
+}
+
+@media (orientation: portrait) {
+    .trailer {
+        width: 100%;
+        height: auto;
+
+        padding: 2.5vh 0;
+    }
+
+    .trailerTitulo {
+        width: 100%;
+        min-height: 20vh;
+        height: auto;
+    }
+
+    .trailerVideo {
+        height: auto;
+        width: 100%;
+    }
+
+    .trailerVideo .botonPlay{
+        height: 56.25vw;
+        width: 100vw;
+    }
+
+    .trailerTexto {
+        width: 100%;
+        min-height: 20vh;
+        height: auto;
+    }
+}</style><style type="text/css" data-vite-dev-id="D:/Escritorio/Fate-Umbrella.ver/0 Fate Umbrella.ver Web/Fate Umbrella.ver/src/instances/01 home/components/04 fateSeries/FateSeries.css">/* FATE SERIES */
+
+.fateSeries {
+    width: 100%;
+    height: 92.5vh;
+
+    border-top: 1px solid rgb(214, 188, 85);
+    border-bottom: 1px solid rgb(214, 188, 85);
+
+    background-image: url(../../../imgs/Home/FateSeries/fondo.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.contenedorSeries {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+    width: 100%;
+    height: 100%;
+
+    overflow-x: auto; /* ✅ activa scroll horizontal solo dentro del contenedor */
+    overflow-y: hidden;
+    scroll-behavior: smooth; /* animación suave */
+    max-width: 100%;
+}
+
+.contenedorSeries::-webkit-scrollbar {
+  display: none;
+}
+
+.espaciadorSeries {
+    width: 0px;
+    height: 82.5vh;
+
+    margin: 0 5vw;
+
+    border: 1px solid black;
+}
+
+.contenedorUmbrella {
+    margin-left: 5vw;
+}
+
+.contenedorFate {
+    margin-right: 5vw;
+}
+
+.contenedorUmbrella h2,
+.contenedorFate h2 {
+    user-select: none;
+
+    width: auto;
+    height: 10vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    filter: drop-shadow(1.25px 1.25px 0px rgba(0, 0, 0, 0.25)) drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
+}
+
+.contenedorChapters,
+.contenedorFateSeries {
+    height: 100%;
+    width: auto;
+
+    display: flex;
+}
+
+@media (orientation: portrait) {
+    .fateSeries {
+        height: 70vh;
+    }
+
+    .espaciadorSeries {
+        height: 65vh;
+    }
+
+    .contenedorUmbrella h2,
+    .contenedorFate h2 {
+        justify-content: left;
+        
+        margin-left: 5vh;
+    }
+
+    .contenedorChapters,
+    .contenedorFateSeries {
+        margin: 0 1.5vh;
+    }
+}</style><style type="text/css" data-vite-dev-id="D:/Escritorio/Fate-Umbrella.ver/0 Fate Umbrella.ver Web/Fate Umbrella.ver/src/instances/01 home/components/04 fateSeries/itemSeries/ItemSeries.css">.itemSeries {
+    user-select: none;
+
+    width: 20vh;
+    height: 70vh;
+
+    margin: 2.5vh;
+
+    border: 1px solid black;
+
+    background-color: rgb(220, 206, 151);
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    transition: 0.3s ease;
+}
+
+.itemSeries img {   
+    transition: 0.3s ease;
+    filter: drop-shadow(0px 0px 2.5px rgba(255, 255, 255, 0.6));
+}
+
+.itemSeries:hover {
+    cursor: pointer;
+    transform: scale(1.025);
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.4));
+}
+
+.itemSeries:hover img {
+    cursor: pointer;
+    transform: scale(1.05);
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.6));
+}
+
+.fondoItemSeries {
+    width: 100%;
+    height: 100%;
+}
+
+.itemSeries a {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    margin: 0;
+}
+
+.contenedorItemSeries {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: end;
+    justify-content: center;
+
+    border: 1px solid black;
+}
+
+.logoSerie {
+    width: 15vh;
+    height: 15vh;
+
+    margin: 0 2.5vh 5vh;
+}
+
+@media (orientation: portrait) {
+    .itemSeries {
+        width: 15vh;
+        height: 55vh;
+
+        margin: 1.5vh;
+        margin-top: 0;
+    }
+
+    .itemSeries a {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+        margin: 0;
+    }
+
+    .logoSerie {
+        max-height: 12vh;
+        max-width: 12vh;
+    }
+}</style><style type="text/css" data-vite-dev-id="D:/Escritorio/Fate-Umbrella.ver/0 Fate Umbrella.ver Web/Fate Umbrella.ver/src/instances/01 home/components/05 versiones/Versiones.css">/* VERSIONADO */
+
+.versiones {
+    border-top: 1px solid lightgray;
+}
+
+.contenedorVersionado {
+    width: 100%;
+}
+
+.contenedorVersionado h2 {
+    width: 100%;
+
+    text-align: center;
+    font-size: 2em;
+
+    padding-top: 5vh;
+}
+
+.contenedorChangelog {
+    width: 100%;
+    height: 85vh;
+
+    padding: 2.5vh 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textoCambios {
+    width: 40vw;
+    height: 70vh;
+
+    padding: 2.5vh;
+
+    margin-right: 2.5vw;
+
+    border: 1px solid black;
+    
+    overflow-x: hidden; /* ✅ activa scroll horizontal solo dentro del contenedor */
+    overflow-y: auto;
+    scroll-behavior: smooth; /* animación suave */
+    max-width: 100%;
+    max-height: 100%;
+
+    background-color: white;
+}
+
+.textoCambios h3 {
+    text-align: center;
+    margin-bottom: 2.5vh;
+}
+
+.textoCambios h4 {
+    margin: 2vh 0;
+}
+
+.textoCambios p {
+    margin: 1vh 0;
+}
+
+.listaVersiones {
+    width: auto;
+    height: 70vh;
+
+    overflow-y: scroll;
+
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.listaVersiones::-webkit-scrollbar {
+  display: none;
+}
+
+.listaVersiones a {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+
+    filter: drop-shadow(0px 0px 2.5px rgba(0, 0, 0, 0.15));
+    
+    height: 3vh;
+}
+
+.listaVersiones a span{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+
+    width: 100%;
+
+    font-size: 2vh;
+}
+
+.opcionVersionado {
+    display: flex;
+    
+    align-items: center;
+    justify-content: left;
+
+    padding: 1.5vh;
+    margin: 1.5vh;
+
+    background-color: white;
+
+    filter: drop-shadow(0px 0px 2.5px rgba(0, 0, 0, 0.15));
+
+    border: 1px solid lightgray;
+    border-radius: 0.5vh;
+
+    transition: 0.3s ease;
+    
+    font-size: 2vh;
+}
+
+.opcionVersionado:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.opcionVersionado:has(input[type="radio"]:checked) {
+    border: 1px solid black;
+}
+
+.opcionVersionado:has(input[type="radio"]:checked) .imgSelector {
+    background-image: url(../../../imgs/Home/Versionado/SelectorEncendido.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.opcionVersionado input[type="radio"] {
+  display: none;
+}
+
+.imgSelector {
+    width: 3vh;
+    height: 3vh;
+    
+    margin-right: 1vh;
+
+    background-image: url(../../../imgs/Home/Versionado/SelectorApagado.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transition: 0.3s ease;
+}
+
+@media (orientation: portrait) {
+    .contenedorChangelog {
+        display: flex;
+        flex-direction: column-reverse;
+
+        padding: 0;
+
+        height: auto;
+    }
+
+    .contenedorVersionado h2 {
+        padding: 5vh 0;
+    }
+
+    .textoCambios {
+        margin: 0;
+        margin-bottom: 2.5vh;
+
+        width: 80vw;
+        height: 60vh;
+    }
+
+    .listaVersiones {
+        max-width: 70vw;
+
+        height: 30vh;
+
+        margin-bottom: 2.5vh;
+    }
+
+    .imgSelector {
+        min-width: 2.5vh;
+        min-height: 2.5vh;
+        max-width: 2.5vh;
+        max-height: 2.5vh;
+    }
+}</style><style type="text/css" data-vite-dev-id="D:/Escritorio/Fate-Umbrella.ver/0 Fate Umbrella.ver Web/Fate Umbrella.ver/src/instances/02 registro/Registro.css">.registro {
+    width: 100%;
+    height: 92.5vh;
+
+    background-image: url(/imgs/Registro/ChaldeaInside.png);
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedorRegistro {
+    width: auto;
+    height: auto;
+
+    padding: 2.5vh 7.5vh;
+
+    background-color: rgba(255, 255, 255, 0.79);
+    border-radius: 2.5vh;
+}
+
+.imagenRegistro {
+    width: 30vw;
+    height: 100%;
+
+    margin-left: 10vw;
+
+    background-image: url(/imgs/Registro/RomaniTorso.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    
+    filter: drop-shadow(0px 0px 12px rgba(255, 255, 255, 0.47));
+}
+
+.tituloRegistro {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 5vh 0;
+}
+
+.tituloRegistro h1 {
+    user-select: none;
+
+    font-size: 6vh;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formularioRegistro {
+    width: 100%;
+    height: auto;
+
+    margin: 5vh 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formularioRegistro form {
+    width: 30vw;
+}
+
+.formularioRegistro form label {
+    user-select: none;
+
+    width: 100%;
+
+    font-size: 2.5vh;
+
+    margin-bottom: 1vh;
+    
+    border: none;
+    color: rgb(113, 113, 113);
+    
+    display: block;
+}
+
+.formularioRegistro form input {
+    width: 100%;
+    
+    font-size: 3vh;
+
+    padding-left: 0.5vh;
+
+    padding-top: 0.75vh;
+    padding-bottom: 0.25vh;
+
+    margin-top: 1vh;
+    margin-bottom: 4vh;
+
+    border: none;
+    border-bottom: 1px solid black;
+
+    background: none;
+
+    display: block;
+    transition: 0.3s cubic-bezier(0, 0, 0.75, 1.0);
+}
+
+/* quita el borde o glow al enfocar */
+.formularioRegistro input:focus {
+
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    margin-bottom: 4vh;
+
+    outline: none;
+    box-shadow: none;
+    
+}
+
+/* quita fondo amarillo o gris del autocompletado (Chrome/Safari) */
+.formularioRegistro input:-webkit-autofill,
+.formularioRegistro input:-webkit-autofill:hover,
+.formularioRegistro input:-webkit-autofill:focus,
+.formularioRegistro input:-webkit-autofill:active {
+  transition: background-color 9999s ease-in-out 0s;
+  -webkit-text-fill-color: black !important;
+}
+
+/* opcional: evita que cambie el fondo al autocompletar */
+.formularioRegistro input:-webkit-autofill {
+  box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.1) inset;
+}
+
+
+.formularioRegistro button {
+    user-select: none;
+
+    width: 90%;
+    height: 7vh;
+
+    margin: 0.25vh 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg, #ffd700, #ffbe19, #fff3b0);
+    background-size: 200%;
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.4);
+    
+    border: 1px solid goldenrod;
+    border-radius: 5vh;
+
+    transition: 0.3s ease;
+
+    color: rgb(49, 41, 12);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2.5vh;
+
+    transition: background-position 0.6s ease, transform 0.3s, border 0.3s, 0.3s ease;
+}
+
+.formularioRegistro button:hover {
+    box-shadow: 0 4px 10px rgba(139, 119, 0, 0.575);
+    border: 1px solid rgb(255, 225, 119);
+    
+    background-position: right center;
+
+    transform: scale(1.025);
+
+    cursor: pointer;
+}
+
+.formularioRegistro form p {
+    width: 100%;
+
+    margin-bottom: 4vh;
+
+    font-size: 2.5vh;
+
+    text-align: center;
+
+    cursor: default;
+}
+
+.passwords {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pass {
+    width: 45%;
+}
+
+@media (orientation: portrait) {
+    .registro {
+        flex-direction: column;
+        min-height: 100vh; /* Asegura que ocupe toda la pantalla */
+        display: flex;
+    }
+
+    .contenedorRegistro {
+        width: 70vw;
+        padding: 5vw;
+        margin-top: 10vw;
+    }
+
+    .tituloRegistro {
+        margin: 0;
+        margin-top: 2.5vh;
+    }
+
+    .tituloRegistro h1 {
+        font-size: 3vh;
+    }
+
+    .formularioRegistro {
+        margin-bottom: 2.5vh;
+    }
+
+    .formularioRegistro form {
+        width: 90%;
+    }
+
+    .formularioRegistro form label {
+        font-size: 2vh;
+        margin-bottom: 0;
+    }
+    
+    .formularioRegistro form input {
+        padding-left: 0;
+        padding-top: 0.75vh;
+        padding-bottom: 0.25vh;
+        margin-top: 0;
+        margin-bottom: 2vh;
+    }
+    
+    .formularioRegistro input:focus {
+        padding-top: 0.5vh;
+        padding-bottom: 0.5vh;
+        margin-bottom: 2vh;
+    }
+
+    .formularioRegistro button {
+        margin-top: 2.5vh;
+    }
+
+    .formularioRegistro form p {
+        margin: 1.5vh 0;
+    }
+    
+    .pass label {
+        height: 4vh;
+    }
+
+    /* PERSONAJE - LO IMPORTANTE */
+    .imagenRegistro {
+        width: 100vw;
+        
+        margin-left: 0;
+        margin-top: 0;
+        
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        overflow: hidden;
+        
+        background-size: contain;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+    }
+}</style><style type="text/css" data-vite-dev-id="D:/Escritorio/Fate-Umbrella.ver/0 Fate Umbrella.ver Web/Fate Umbrella.ver/src/instances/02 registro/components/01 infoRegistro/InfoRegistro.css">
+.infoRegistro {
+    border-top: 2px solid lightgray;
+    border-bottom: 2px solid lightgray;
+
+    background-image: url(../../../imgs/Home/FondoRepeat.png);
+    background-size: 50px;
+    background-repeat: repeat;
+    background-position: center;
+
+    padding-top: 8vh;
+    padding-bottom: 15vh;
+}
+
+.info {
+    width: 100%;
+    height: 45vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info img {
+    height: auto;
+    max-height: 60vh;
+
+    width: auto;
+    max-width: 20vw;
+
+    margin: 5vh;
+}
+
+.textoInfo {
+    width: 60vw;
+}
+
+.textoInfo h2 {
+    font-size: 3em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 5vh;
+}
+
+.textoInfo p {
+    font-size: 1.2em;
+    text-align: center;
+
+    margin: 1.25vh 0;
+}
+
+.info .imgMash {
+    background-image: url('../../../imgs/Registro/Info/Mash.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 60vh;
+    max-height: 60vh;
+
+    width: 20vw;
+    max-width: 20vw;
+
+    margin: 5vh;
+
+    transition: 0.3s ease;
+}
+
+.info .imgMash:hover {
+    background-image: url('../../../imgs/Registro/Info/MashHover.png');
+    transition: 0.3s ease;
+}
+
+.info .imgNemo {
+    background-image: url("../../../imgs/Registro/Info/Nemo.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 60vh;
+    max-height: 60vh;
+
+    width: 20vw;
+    max-width: 20vw;
+
+    margin: 5vh;
+
+    transition: 0.3s ease;
+}
+
+.info .imgNemo:hover {
+    background-image: url("../../../imgs/Registro/Info/NemoHover.png");
+}
+
+.info .imgEdmond {
+    background-image: url("../../../imgs/Registro/Info/Edmond.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 60vh;
+    max-height: 60vh;
+
+    width: 20vw;
+    max-width: 20vw;
+
+    margin: 5vh;
+
+    transition: 0.3s ease;
+}
+
+.info .imgEdmond:hover {
+    background-image: url("../../../imgs/Registro/Info/EdmondHover.png");
+}
+
+@media (orientation: portrait) {
+    .infoRegistro {
+        padding: 5vh 0;
+    }
+
+    .info {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .info .imgEdmond,
+    .info .imgNemo,
+    .info .imgMash {
+        min-height: 30vh;
+        max-height: 40vh;
+        min-width: 70vw;
+    }
+
+    .reverse {
+        flex-direction: column-reverse;
+    }
+    
+    .textoInfo {
+        width: 80vw;
+    }
+
+    .textoInfo h2 {
+        text-align: center;
+        font-size: 5vh;
+    }
+
+    .textoInfo p {
+        font-size: 2.5vh;
+    }
+}</style><style type="text/css" data-vite-dev-id="D:/Escritorio/Fate-Umbrella.ver/0 Fate Umbrella.ver Web/Fate Umbrella.ver/src/instances/03 login/Login.css">.contenedorLogin {
+    width: 100%;
+    height: 92.5vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.contenedorLogin::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url(/imgs/Login/fondoLogin.png) bottom/cover no-repeat;
+    filter: blur(2px);
+    transform: scale(1.05); /* para evitar bordes duros */
+    z-index: -1;
+}
+
+.imagenLogin {
+    height: 92.5vh;
+    width: 50vw;
+
+    background-image: url(/imgs/Login/fondoPersonaje.png);
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    filter: drop-shadow(0px 0px 12px rgba(255, 246, 160, 0.47));
+}
+
+.formularioLogin {
+    width: 40vw;
+    height: calc(100% - 5vw);
+
+    background-color: rgba(255, 255, 255, 0.884);
+    
+    border-radius: 2.5vh;
+}
+
+.formularioLogin h1 {
+    user-select: none;
+
+    width: 100%;
+
+    margin: 5vh 0 7.5vh;
+
+    font-weight: normal;
+    font-size: 5vh;
+
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formularioLogin form {
+    width: 25vw;
+    height: auto;
+
+    margin: 0 7.5vw;
+
+    margin-bottom: 5vh;
+}
+
+.formularioLogin form label {
+    user-select: none;
+
+    width: 100%;
+
+    font-size: 2.5vh;
+
+    margin-bottom: 1vh;
+    
+    border: none;
+    color: rgb(113, 113, 113);
+    
+    display: block;
+}
+
+.formularioLogin form input {
+    width: 100%;
+    
+    font-size: 3vh;
+
+    padding-left: 0.5vh;
+
+    padding-top: 0.75vh;
+    padding-bottom: 0.25vh;
+
+    margin-top: 1vh;
+    margin-bottom: 10vh;
+
+    border: none;
+    border-bottom: 1px solid black;
+
+    background: none;
+
+    display: block;
+    transition: 0.3s cubic-bezier(0, 0, 0.75, 1.0);
+}
+
+/* quita el borde o glow al enfocar */
+.formularioLogin input:focus {
+
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    margin-bottom: 10vh;
+
+    outline: none;
+    box-shadow: none;
+    
+}
+
+/* quita fondo amarillo o gris del autocompletado (Chrome/Safari) */
+.formularioLogin input:-webkit-autofill,
+.formularioLogin input:-webkit-autofill:hover,
+.formularioLogin input:-webkit-autofill:focus,
+.formularioLogin input:-webkit-autofill:active {
+  transition: background-color 9999s ease-in-out 0s;
+  -webkit-text-fill-color: black !important;
+}
+
+/* opcional: evita que cambie el fondo al autocompletar */
+.formularioLogin input:-webkit-autofill {
+  box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.1) inset;
+}
+
+.formularioLogin button {
+    width: 90%;
+    height: 7vh;
+
+    margin: 0.25vh 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg, #ffd700, #ffbe19, #fff3b0);
+    background-size: 200%;
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.4);
+    
+    border: 1px solid goldenrod;
+    border-radius: 5vh;
+
+    transition: 0.3s ease;
+
+    color: rgb(49, 41, 12);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+
+    transition: background-position 0.6s ease, transform 0.3s, border 0.3s, 0.3s ease;
+}
+
+.formularioLogin button:hover {
+    box-shadow: 0 4px 10px rgba(139, 119, 0, 0.575);
+    border: 1px solid rgb(255, 225, 119);
+    
+    background-position: right center;
+
+    transform: scale(1.025);
+
+    cursor: pointer;
+}
+
+.formularioLogin p {
+    width: 100%;
+
+    text-align: center;
+
+    margin: 1vh 0;
+}
+
+.formularioLogin a {
+    text-decoration: none;
+
+    color: blue;
+}
+
+@media (orientation: portrait) {
+
+    .contenedorLogin {
+        height: auto;
+        min-height: 92.5vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+
+        padding: 0;
+
+        position: relative;
+    }
+
+    /* ---- IMAGEN DE FONDO DEL PERSONAJE ---- */
+    .imagenLogin {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+
+        transform: translate(-50%, -50%);
+
+        background-size: contain;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+
+        filter: drop-shadow(0px 0px 12px rgba(255, 246, 160, 0.47));
+
+        pointer-events: none; /* no interferir clicks */
+        z-index: -1;
+    }
+
+    /* ---- FORMULARIO ---- */
+    .formularioLogin {
+        width: 75vw;
+        height: auto;
+
+        margin: 7.5vw;
+
+        padding: 5vw;
+
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 3vh;
+        backdrop-filter: blur(4px);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .formularioLogin h1 {
+        font-size: 2.5vh;
+        margin: 0;
+    }
+
+    .formularioLogin form {
+        width: 60vw;
+
+        margin: 2.5vh 0;
+    }
+
+    .formularioLogin form label {
+        font-size: 2vh;
+
+        width: 100%;
+    }
+    
+    .formularioLogin form input {
+        font-size: 2vh;
+
+        margin-top: 0;
+        margin-bottom: 4vh;
+
+        padding: 0;
+
+        width: 100%;
+
+        transition: 0.3s ease;
+    }
+
+    .formularioLogin form input:focus {
+        margin-bottom: 3vh;
+
+        padding-bottom: 0.5vh;
+    }
+
+    .formularioLogin button {
+
+        width: 100%;
+        height: 6vh;
+        margin: 0;
+        font-size: 2vh;
+    }
+
+    .formularioLogin p {
+        font-size: 1.5vh;
+        margin: 0;
+    }
+}
+</style><style type="text/css" data-vite-dev-id="D:/Escritorio/Fate-Umbrella.ver/0 Fate Umbrella.ver Web/Fate Umbrella.ver/src/instances/04 cuenta/Cuenta.css">.loading {
+    width: 100%;
+    height: 92.5vh;
+
+    background-image: url(/imgs/Home/FondoRepeat.png);
+    background-size: 50px;
+    background-repeat: repeat;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading h1 {
+    font-size: 3em;
+}</style><style type="text/css" data-vite-dev-id="D:/Escritorio/Fate-Umbrella.ver/0 Fate Umbrella.ver Web/Fate Umbrella.ver/src/instances/04 cuenta/components/01 cuenta/InfoCuenta.css">/* CUENTA */
+
+.cuenta {
+    width: 100%;
+    height: auto;
+}
+
+.contenedorCuenta {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: start;
+    justify-content: center;
+
+    background-image: url(../../../imgs/Home/FateSeries/fondo.png);
+    background-position: center;
+    background-size: cover;
+
+    padding: 5vh 0;
+
+    border-top: 2px solid burlywood;
+    border-bottom: 2px solid burlywood;
+}
+
+.contenedorCuenta img {
+    width: 50vh;
+    height: 50vh;
+
+    border: 2px solid black;
+    border-radius: 5vh;
+
+    margin: 5vh;
+}
+
+.infoCuenta h1 {
+    user-select: none;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+    margin: 5vh 0 0;
+
+    font-weight: normal;
+    font-size: 10vh;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.progresoNivel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 0 0 5vh;
+}
+
+.barraNivel {
+    width: 50vw;
+    height: 1vh;
+
+    background: white;
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.3),
+                inset 0 -1px 2px rgba(0, 0, 0, 0.2);
+    border: 1px solid #2a2a2a;
+
+    margin: 2.5vh 0;
+}
+
+.barraRelleno {
+    height: 100%;
+    background: linear-gradient(90deg, #b5c6ff, #8ea2ff, #6a83e8);
+    transition: width 1.2s ease-in-out;
+}
+
+.numeroNivel {
+    user-select: none;
+
+    width: 10vh;
+    height: 10vh;
+
+    background-image: url(../../../imgs/Cuenta/RecuadroNivel.png);
+    background-position: center;
+    background-size: contain;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.numeroNivel span {
+    color: white;
+    font-size: 3vh;
+
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.bioCuenta {
+    width: 52.5vw;
+    height: 17.5vh;
+
+    background: linear-gradient(180deg, #4c3d34 0%, #3b3029 100%);
+    border: 1.5px solid rgba(255, 255, 255, 0.15);
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border-radius: 2.5vh;
+    padding: 3vh 5vh;
+    backdrop-filter: blur(2px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bioCuenta p {
+    user-select: none;
+
+    color: #f8f8f8;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    line-height: 1.4;
+    font-size: 4vh;
+    text-align: justify;
+
+    filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.385)) drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.385));
+
+    font-family: 'Times New Roman', Times, serif;
+}
+
+@media (orientation: portrait) {
+    .contenedorCuenta {
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .contenedorCuenta img {
+        width: 70vw;
+        height: 70vw;
+
+        margin: 7.5vw 15vw;
+    }
+
+    .infoCuenta {
+        width: 100vw;
+    }
+
+    .infoCuenta h1 {
+        font-size: 7.5vh;
+
+        margin: 0;
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .progresoNivel {
+        justify-content: center;
+        margin-bottom: 7.5vw;
+    }
+
+    .barraNivel {
+        width: 60vw;
+        margin-right: 2.5vh;
+    }
+
+    .numeroNivel {
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .numeroNivel span {
+        font-size: 2.25vh;
+    }
+
+    .bioCuenta {
+        width: 60vw;
+        height: auto;
+
+        margin: 5vh 12.5vw;
+        padding: 5vw 7.5vw;
+    }
+
+    .bioCuenta p {
+        font-size: 2.75vh;
+    }
+}</style><style type="text/css" data-vite-dev-id="D:/Escritorio/Fate-Umbrella.ver/0 Fate Umbrella.ver Web/Fate Umbrella.ver/src/instances/04 cuenta/components/02 servantsCuenta/ServantsCuenta.css">/* SERVANTS CUENTA */
+
+.servantsCuenta {
+    width: 100%;
+    height: auto;
+
+    padding: 5vh 0;
+
+    background-image: url(../../../imgs/Home/FondoRepeat.png);
+    background-size: 50px;
+    background-repeat: repeat;
+    background-position: top center;
+
+}
+
+.contenedorServantsCuenta {
+    width: 100%;
+    height: auto;
+
+    margin-bottom: 5vh;
+}
+
+.contenedorServantsCuenta h2 {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 5vh;
+
+    margin-bottom: 5vh;
+}
+
+.listaServantsCuenta {
+    width: 100%;
+    height: 30vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.flechaListaServants {
+    width: 5vw;
+    height: 5vw;
+    
+    background-image: url(../../../imgs/Cuenta/Flecha.png);
+    background-size: cover;
+    background-position: center;
+
+    transition: 0.3s ease;
+}
+
+.flechaListaServants:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.flechaInvertidaHorizontal {
+    background-image: url(../../../imgs/Cuenta/FlechaI.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.tarjetasServants {
+    max-width: 80vw;
+    padding: 2.5vh 0;
+    
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+
+    scrollbar-width: none; /* firefox */
+}
+
+.tarjetasServants::-webkit-scrollbar { display: none; }
+
+.tarjetasServants h1 {
+    width: 100%;
+
+    text-align: center;
+
+    margin: 0 2.5vh;
+}
+
+@media (orientation: portrait) {
+    .servantsCuenta {
+        padding-bottom: 2.5vh;
+    }
+
+    .flechaListaServants,
+    .flechaInvertidaHorizontal {
+        display: none;
+    }
+
+    .contenedorServantsCuenta h2 {
+        margin-bottom: 2.5vh;
+    }
+
+    .listaServantsCuenta {
+        height: auto;
+        width: 100vw;
+    }
+
+    .tarjetasServants {
+        max-width: 87.5vw;
+        padding: 1.5vh 0;
+    }
+}</style><style type="text/css" data-vite-dev-id="D:/Escritorio/Fate-Umbrella.ver/0 Fate Umbrella.ver Web/Fate Umbrella.ver/src/instances/04 cuenta/components/02 servantsCuenta/01 servantListaServants/ServantListaServants.css">/* TARJETA SERVANT */
+
+.tarjetaServant {
+    user-select: none;
+
+    position: relative;
+    box-sizing: border-box;
+
+    width: 25vh;
+    aspect-ratio: 1 / 1;
+
+    flex: 0 0 25vh;
+
+    margin: 0 2.5vh;
+    border: 2px solid black;
+    overflow: hidden;
+    border-radius: 2.5vh;
+    transition: transform 0.3s ease;
+}
+
+.tarjetaServant:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.claseServant {
+    position: absolute;
+
+    top: 1vh;
+    left: 1vh;
+
+    width: 6.5vh;
+    height: 6.5vh;
+
+    z-index: 2;
+
+    object-fit: contain;
+    display: block;
+
+    filter: drop-shadow(0 0 5px rgba(0,0,0,0.6));
+}
+
+.imagenServant {
+    position: absolute;
+
+    inset: 0;                /* top:0; right:0; bottom:0; left:0 */
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;       /* IMPORTANT: cubre y recorta */
+    object-position: center; /* centra la parte visible */
+
+    display: block;          /* quita gaps debajo de img inline */
+    
+    z-index: 1;
+}
+
+.selectedServant {
+    transform: scale(1.08);
+
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.75));
+
+    transition: 0.5s;
+}
+
+@media (orientation: portrait) {
+    .tarjetaServant {
+        width: 15vh;
+        flex: 0 0 15vh;
+
+        margin: 0 1.5vh;
+    }
+
+    .claseServant {
+        width: 4vh;
+        height: 4vh;
+    }
+
+    .selectedServant {
+        transform: scale(1.04);
+    }
+}</style><style type="text/css" data-vite-dev-id="D:/Escritorio/Fate-Umbrella.ver/0 Fate Umbrella.ver Web/Fate Umbrella.ver/src/instances/04 cuenta/components/02 servantsCuenta/02 servantSeleccionado/ServantSeleccionado.css">/* SERVANT SELECCIONADO */
+
+.contenedorContenidoServantSeleccionado {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    user-select: none;
+}
+
+.contenidoServantSeleccionado {
+    width: 90%;
+    height: auto;
+
+
+    border-radius: 2.5vh;
+
+    background-color: #434343;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.25);
+}
+
+.tituloServantSeleccionado {
+    width: 100%;
+    height: 25vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.izqTituloServant {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+    width: 70%;
+    height: 100%;
+}
+
+.izqTituloServant img {
+    width: 15vh;
+    height: 15vh;
+
+    max-width: 15vw;
+    max-height: 15vw;
+
+    margin: 5vh;
+
+    filter: drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.385)) drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.714));
+}
+
+.izqTituloServant h1 {
+    width: auto;
+
+    font-size: 7vh;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    color: white;
+    filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.385)) drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.714));
+}
+
+.derTituloServant {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+    width: 30%;
+    height: 100%;
+}
+
+.estrellasServant {
+    margin-right: 8vh;
+}
+
+.estrellasServant img {
+    width: 7.5vh;
+    height: 7.5vh;
+
+    max-width: 5vw;
+    max-height: 5vw;
+    
+    margin: 0.5vh;
+}
+
+.infoServantSeleccionado {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portadaImagenServant {
+    width: auto;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portadaImagenServant img {
+    height: 82vh;
+
+    margin: 5vh;
+    margin-top: 0;
+
+    border: 1.5px solid rgba(255, 255, 255, 0.15);
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border-radius: 2.5vh;
+    backdrop-filter: blur(2px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.statsServantSeleccionado {
+    width: calc(100% - 20vw);
+    height: auto;
+}
+
+.ataqueServant, .vidaServant {
+    width: 90%;
+    height: auto;
+
+    margin-bottom: 5vh;
+
+    border: 1px solid black;
+    border-radius: 2.5vh;
+
+    padding: 2.5vh;
+
+    background: linear-gradient(180deg, #4c3d34 0%, #3b3029 100%);
+    border: 1.5px solid rgba(255, 255, 255, 0.15);
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border-radius: 2.5vh;
+    backdrop-filter: blur(2px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ataqueServant h2, .vidaServant h2 {
+    font-size: 3.5vh;
+
+    text-align: center;
+    margin-bottom: 2.5vh;
+
+    color: white;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.385)) drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.385));
+}
+
+.ataqueServantValores, .vidaServantValores {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ataqueBase, .vidaBase {
+    width: 30%;
+}
+
+.ataqueActual, .vidaActual {
+    width: 30%;
+}
+
+.ataqueMaximo   , .vidaMaximo   {
+    width: 30%;
+}
+
+.ataqueBase h3, .ataqueBase p,
+.vidaBase h3, .vidaBase p {
+    font-size: 2.5vh;
+    text-align: left;
+
+    color: white;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.385)) drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.385));
+}
+
+.ataqueActual h3, .ataqueActual p,
+.vidaActual h3, .vidaActual p {
+    font-size: 2.5vh;
+    text-align: center;
+
+    color: white;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.385)) drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.385));
+}
+
+
+.ataqueMaximo h3, .ataqueMaximo p,
+.vidaMaximo h3, .vidaMaximo p {
+    font-size: 2.5vh;
+    text-align: right;
+
+    color: white;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.385)) drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.385));
+}
+
+.nombreCraftEssence {
+    font-size: 5vh;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    color: white;
+    filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.385)) drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.714));
+}
+
+.infoCraftEssence {
+    width: 90%;
+    height: auto;
+
+    margin: 5vh 0;
+
+    display: flex;
+    align-items: start;
+    justify-content: left;
+
+    border: 1px solid black;
+    border-radius: 2.5vh;
+
+    padding: 2.5vh;
+
+    background: linear-gradient(180deg, #4c3d34 0%, #3b3029 100%);
+    border: 1.5px solid rgba(255, 255, 255, 0.15);
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border-radius: 2.5vh;
+    backdrop-filter: blur(2px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.imgCraftEssence {
+    width: 20vh;
+    height: 20vh;
+
+    margin-right: 5vh;
+}
+
+.imgCraftEssence img {
+    width: 20vh;
+    height: 20vh;
+
+    border: 1.5px solid rgba(255, 255, 255, 0.15);
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border-radius: 1.5vh;
+    backdrop-filter: blur(2px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.textoCraftEssence h2 {
+    font-size: 4.5vh;
+
+    color: white;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.385)) drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.385));
+}
+
+.textoCraftEssence p {
+    font-size: 2.5vh;
+    text-align: justify;
+
+    margin-left: 1.5vh;
+    margin-top: 1.5vh;
+
+    color: white;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.385)) drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.385));
+}
+
+.infoCraftEssence h3 {
+    font-size: 3vh;
+    
+    width: 100%;
+
+    text-align: center;
+
+    color: white;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.385)) drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.385));
+}
+
+.tituloCraftEssence {
+    width: 100%;
+
+    margin-bottom: 2.5vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tituloCraftEssence .estrellasCraft img {
+    width: 3.5vh;
+    height: 3.5vh;
+
+    margin-left: 0.5vh;
+}
+
+.noHayServant h1 {
+    text-align: center;
+}
+
+@media (orientation: portrait) {
+    .noHayServant h1 {
+        text-align: center;
+        font-size: 2.5vh;
+
+        margin: 0;
+        margin-bottom: 2.5vh;
+    }
+
+    .contenidoServantSeleccionado {
+        width: 90vw;
+    }
+
+    .tituloServantSeleccionado {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .izqTituloServant {
+        width: 100%;
+        height: auto;
+
+        margin: 1.5vh 0;
+
+        justify-content: center;
+    }
+
+    .izqTituloServant img {
+        margin: 0;
+        margin-right: 1.5vh;
+
+        width: 5vh;
+        height: 5vh;
+    }
+
+    .izqTituloServant h1 {
+        font-size: 2.5vh;
+        max-width: 100%;
+        max-height: 5vh;
+    }
+
+    .derTituloServant {
+        width: 100%;
+
+        margin-bottom: 1.5vh;
+
+        justify-content: center;
+    }
+
+    .estrellasServant {
+        margin: 0;
+    }
+
+    .estrellasServant img {
+        margin: 0 0.5vw;
+    }
+
+    .infoServantSeleccionado {
+        flex-direction: column;
+    }
+
+    .portadaImagenServant {
+        width: 80vw;
+        height: auto;
+
+        margin: 2.5vh;
+        margin-top: 0;
+    }
+
+    .portadaImagenServant img {
+        width: 80vw;
+
+        margin: 0;
+
+        height: auto;
+    }
+
+    .statsServantSeleccionado {
+        width: 80vw;
+
+        margin: 2.5vh;
+        margin-top: 0;
+    }
+
+    .ataqueServant,
+    .vidaServant {
+        width: auto;
+        padding: 1.5vh;
+
+        margin-bottom: 2.5vh;
+    }
+
+    .ataqueServant h2, .vidaServant h2 {
+        font-size: 2.5vh;
+    }
+
+    .ataqueBase h3, .ataqueBase p,
+    .vidaBase h3, .vidaBase p {
+        font-size: 2vh;
+    }
+
+    .ataqueActual h3, .ataqueActual p,
+    .vidaActual h3, .vidaActual p {
+        font-size: 2vh;
+    }
+
+    .ataqueMaximo h3, .ataqueMaximo p,
+    .vidaMaximo h3, .vidaMaximo p {
+        font-size: 2vh;
+    }
+
+    .nombreCraftEssence {
+        text-align: center;
+    }
+
+    .infoCraftEssence {
+        margin-top: 2.5vh;
+        margin-bottom: 0;
+        padding: 1.5vh;
+
+        min-height: 10vh;
+        height: auto;
+    }
+
+    .imgCraftEssence {
+        width: 10vh;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-right: 1.5vh;
+    }
+    
+    .imgCraftEssence img {
+        width: 10vh;
+        height: 10vh;
+    }
+
+    .tituloCraftEssence {
+        flex-direction: column;
+
+        height: 10vh;
+
+        margin: 0;
+    }
+
+    .tituloCraftEssence h2 {
+        height: 5vh;
+        width: 100%;
+
+        text-align: center;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 2.5vh;
+        margin-bottom: 1.5vh;
+    }
+
+    .textoCraftEssence p {
+        margin: 0;
+        margin-top: 1.5vh;
+
+        font-size: 1.5vh;
+    }
+
+    .infoCraftEssence h3 {
+        width: 100%;
+        height: 10vh;
+
+        font-size: 2.5vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}</style><style type="text/css" data-vite-dev-id="D:/Escritorio/Fate-Umbrella.ver/0 Fate Umbrella.ver Web/Fate Umbrella.ver/src/instances/04 cuenta/components/03 amigosCuenta/AmigosCuenta.css">.contenedorAmigosCuenta {
+    width: 100%;
+    height: auto;
+
+    background-image: url(../../../imgs/Home/FateSeries/fondo.png);
+    background-position: center;
+    background-size: cover;
+
+    padding: 5vh 0;
+
+    border-top: 2px solid burlywood;
+    border-bottom: 2px solid burlywood;
+}
+
+.contenedorAmigosCuenta h2 {
+    display: inline-block;
+
+    margin-left: 15vh;
+    margin-bottom: 5vh;
+
+    font-size: 5vh;
+}
+
+/* LISTA AMIGOS */
+
+.listaAmigosCuenta {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedorListaAmigosCuenta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    
+    width: 150vh; 
+}
+
+/* TARJETA AMIGOS */
+
+.tarjetaAmigoCuenta {
+    user-select: none;
+    
+    width: auto;
+    height: auto;
+    
+    margin: 2.5vh;
+    padding: 2.5vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background: linear-gradient(180deg, #4c3d34 0%, #3b3029 100%);
+    box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border-radius: 2.5vh;
+    backdrop-filter: blur(2px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjetaAmigoCuenta:hover {
+    cursor: pointer;
+    transform: scale(1.025);
+}
+
+.contenidoTarjetaAmigoCuenta {
+    width: 40vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgAmigoCuenta {
+    max-width: 10vh;
+    width: auto;
+    min-width: 5vh;
+
+    aspect-ratio: 1 / 1;
+
+    margin-right: 2.5vh;
+}
+
+.imgAmigoCuenta img {
+    max-width: 10vh;
+    width: auto;
+    min-width: 5vh;
+
+    aspect-ratio: 1 / 1;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border-radius: 1.5vh;
+    backdrop-filter: blur(2px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.infoAmigoCuenta {
+    width: 27.5vh;
+}
+
+.infoAmigoCuenta span {
+    line-height: 5vh;
+    font-size: 3vh;
+    font-weight: bold;
+
+    color: white;
+
+    filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.385)) drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.385));
+
+    font-family: 'Times New Roman', Times, serif;
+
+    margin-bottom: 1vh;
+}
+
+.nivelAmigoCuenta {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.barraNivelAmigoCuenta {
+    width: 20vh;
+    max-width: 20vh;
+    height: 0.5vh;
+
+    background-color: white;
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.3),
+                inset 0 -1px 2px rgba(0, 0, 0, 0.2);
+    border: 1px solid #2a2a2a;
+}
+
+.progresoNivelAmigoCuenta {
+    height: 0.5vh;
+
+    background: linear-gradient(90deg, #b5c6ff, #8ea2ff, #6a83e8);
+}
+
+.numeroNivelAmigoCuenta {
+    user-select: none;
+
+    min-width: 5vh;
+    width: 5vh;
+    max-width: 5vh;
+    min-width: 5vh;
+    height: 5vh;
+    max-height: 5vh;
+
+    margin-left: 2.5vh;
+
+    background-image: url(../../../imgs/Cuenta/RecuadroNivel.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.numeroNivelAmigoCuenta span {
+    color: white;
+    font-size: 1.5vh;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.sinAmigos {
+    width: 100%;
+
+    font-size: 1.5em;
+    text-align: center;
+}
+
+@media (orientation: portrait) {
+    .contenedorAmigosCuenta {
+        padding-bottom: 1.5vh;
+    }
+
+    .contenedorAmigosCuenta h2 {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 5vh;
+        text-align: center;
+    }
+
+    .contenedorListaAmigosCuenta a {
+        width: 100vw;
+        height: 17.5vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin: 0;
+    }
+
+    .infoAmigoCuenta {
+        width: auto;
+        max-width: 25vh;
+    }
+
+    .tarjetaAmigoCuenta {
+        margin: 0;
+        max-width: 80vw;
+    }
+}</style><style type="text/css" data-vite-dev-id="D:/Escritorio/Fate-Umbrella.ver/0 Fate Umbrella.ver Web/Fate Umbrella.ver/src/instances/05 descarga/Descarga.css">.descarga {
+    width: 100%;
+    height: 92.5vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url(/imgs/Descarga/Fondo.png);
+    background-position: top;
+    background-size: cover;
+}
+
+.contenedorDescarga {
+    width: auto;
+    height: auto;
+
+    border-radius: 2vh;
+
+    /* background-color: rgba(255, 255, 255, 0.682); */
+}
+
+.tituloDescarga {
+    width: 100%;
+
+    margin: 5vh 0;
+}
+
+.tituloDescarga h1 {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+}
+
+.botonesDescarga {
+    width: 100%;
+    height: auto;
+    
+    margin: 5vh 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botonDescarga {
+    border-radius: 2.5vh;
+
+    width: 15vw;
+    height: auto;
+    margin: 2.5vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: white;
+}
+
+.botonDescarga img {
+    height: 5vh;
+    width: 5vh;
+
+    padding: 2.5vh 0;
+    margin-right: 2.5vh;
+}
+
+.botonDescarga span {
+    font-weight: bold;
+    font-size: larger;
+}
+
+/* Windows 10 */
+.w10 {
+    transition: all 0.25s ease-in-out;
+}
+
+.w10:hover {
+  background-color: #0078D7; /* azul Windows 10 */
+  filter: drop-shadow(0px 0px 5px #0078D780);
+  transform: scale(1.025);
+  cursor: pointer;
+}
+
+.w10:hover img {
+  filter: brightness(0) invert(1);
+  transition: 0.15s ease;
+}
+
+.w10:hover span {
+  color: white;
+}
+
+/* Windows 11 */
+.w11 {
+    transition: all 0.25s ease-in-out;
+}
+
+.w11:hover {
+  background-color: #0099FF; /* azul Windows 11 */
+  filter: drop-shadow(0px 0px 5px #0099ff80);
+  transform: scale(1.025);
+  cursor: pointer;
+}
+
+.w11:hover img {
+  filter: brightness(0) invert(1);
+  transition: 0.15s ease;
+}
+
+.w11:hover span {
+  color: white;
+}
+
+/* Mac */
+.mac {
+    transition: all 0.25s ease-in-out;
+}
+
+.mac:hover {
+  background-color: #000000; /* negro de Apple */
+  filter: drop-shadow(0px 0px 5px #00000080);
+  transform: scale(1.025);
+  cursor: pointer;
+}
+
+.mac:hover img {
+  filter: brightness(0) invert(1);
+  transition: 0.15s ease;
+}
+
+.mac:hover span {
+  color: white;
+}</style><style type="text/css" data-vite-dev-id="D:/Escritorio/Fate-Umbrella.ver/0 Fate Umbrella.ver Web/Fate Umbrella.ver/src/instances/06 empresa/Empresa.css">@font-face {
+  font-family: 'Rosie Brown';
+  src: url('/src/assets/RosieBrown.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}</style><style type="text/css" data-vite-dev-id="D:/Escritorio/Fate-Umbrella.ver/0 Fate Umbrella.ver Web/Fate Umbrella.ver/src/instances/06 empresa/components/01 empresa/EmpresaInfo.css">.empresa {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+
+    background-repeat: no-repeat;
+    background-image: url(../../../imgs/Empresa/FondoEmpresa.png);
+    background-position: center;
+    background-size: cover;
+
+    user-select: none;
+}
+
+/* Capa superpuesta para blur y opacidad */
+.empresa::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: inherit; /* usa la misma imagen de fondo */
+    background-position: center;
+    background-size: cover;
+
+    filter: blur(6px) brightness(1.2); /* blur + un poco menos de brillo */
+    opacity: 0.7; /* controla la transparencia */
+    z-index: 0;
+}
+
+/* Asegura que el contenido quede por encima */
+.empresa > * {
+    position: relative;
+    z-index: 1;
+}
+
+.nombreEmpresa {
+    user-select: none;
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nombreEmpresa img {
+    margin: 5vh;
+    max-height: 25vh;
+
+    max-width: 90vw;
+
+    filter: drop-shadow(0px 0px 5px black);
+}
+
+.separadorBlanco {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tituloIntegrantesEmpresa {
+    width: 100%;
+    height: auto;
+
+    user-select: none;
+
+    padding: 5vh 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tituloIntegrantesEmpresa img {
+    height: 8vh;
+    margin-bottom: 1vh;
+}
+
+.tituloIntegrantesEmpresa span {
+    font-family: 'Rosie Brown';
+    font-weight: bold;
+
+    margin: 0 2.5vh;
+
+    text-align: center;
+    font-size: 8vh;
+
+    transition: 0.5s ease;
+}
+
+.tituloIntegrantesEmpresa:hover span {
+    margin: 0 5vh;
+    transform: scale(1.02);
+}
+
+.invertidoHorizontal {
+    transform: scaleX(-1);
+}
+
+.lineaBlanca {
+    width: 50vw;
+
+    border: 2px solid white;
+}
+
+@media (orientation: portrait) {
+    .tituloIntegrantesEmpresa {
+        height: auto;
+        padding: 0;
+    }
+
+    .tituloIntegrantesEmpresa span {
+        max-width: 50vw;
+        font-size: 3vh;
+
+        text-align: center;
+
+        margin: 0 1.5vh;
+
+        filter: drop-shadow(0px 0px 5px white) drop-shadow(0px 0px 15px white);
+    }
+    
+    .tituloIntegrantesEmpresa:hover span {
+        margin: 0 2.5vh;
+    }
+
+    .tituloIntegrantesEmpresa img {
+        max-width: 15vw;
+        height: auto;
+    }
+}</style><style type="text/css" data-vite-dev-id="D:/Escritorio/Fate-Umbrella.ver/0 Fate Umbrella.ver Web/Fate Umbrella.ver/src/instances/06 empresa/components/01 empresa/01 owners/Owners.css">.ownersEmpresa {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.contenedorOwnersEmpresa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 2.5vh 5vh;
+
+    margin: 5vh 0;
+
+    background-color: rgba(255, 255, 255, 0.746);
+    border-radius: 2.5vh;
+}
+
+.owner {
+    user-select: none;
+
+    margin: 2.5vh;
+}
+
+.owner a {
+    color: black;
+    text-decoration: none;
+
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.owner img {
+    width: 40vh;
+    max-width: 40vw;
+    height: 40vh;
+    max-height: 40vw;
+    
+
+    border-radius: 50%;
+    filter: drop-shadow(0px 0px 5px black);
+
+    transition: 0.3s ease;
+}
+
+.owner img:hover {
+    transform: scale(1.01);
+}
+
+.owner span {
+    width: 100%;
+    height: auto;
+
+    margin-top: 2vh;
+
+    filter: drop-shadow(0px 0px 5px white);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.owner span a {
+    transition: 0.2s ease;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.owner span a:hover {
+    transform: scale(1.01) translateY(-2px);
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.442));
+}
+
+@media (orientation: portrait) {
+    .contenedorOwnersEmpresa {
+        width: 90vw;
+        height: auto;
+
+        margin: 5vh 0;
+        padding: 0;
+    }
+
+    .owner {
+        width: 35vw;
+        margin: 5vw 3.5vw;
+    }
+
+    .owner a img {
+        width: 35vw;
+        height: 35vw;
+    }
+
+    .owner span {
+        margin-top: 1vh;
+    }
+
+    .owner span a {
+        font-size: 3vh;
+    }
+}</style><style type="text/css" data-vite-dev-id="D:/Escritorio/Fate-Umbrella.ver/0 Fate Umbrella.ver Web/Fate Umbrella.ver/src/instances/06 empresa/components/01 empresa/02 empleados/Empleados.css">.empleadosEmpresa {
+    width: 100%;
+    height: auto;
+
+    overflow-y: hidden;
+    overflow-x: scroll;
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.empleado {
+    user-select: none;
+
+    width: 30vh;
+    max-width: 20vw;
+    height: 100%;
+    max-height: 15vw;
+
+    margin: 5vh 2.5vh;
+    background-color: rgba(255, 255, 255, 0.746);
+    border-radius: 2.5vh;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: 0.3s ease;
+}
+
+.empleado:hover {
+    transform: scale(1.025);
+}
+
+.empleado img {
+    width: 15vh;
+    height: 15vh;
+
+    border-radius: 50%;
+
+    filter: drop-shadow(0px 0px 10px white);
+
+    margin: 2.5vh;
+}
+
+.empleado span {
+    width: 100%;
+
+    margin-bottom: 2.5vh;
+
+    font-size: 1.2em;
+    font-weight: bold;
+
+    filter: drop-shadow(0px 0px 5px white);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (orientation: portrait) {
+    .empleado {
+        margin: 5vw 2.5vw;
+        
+        width: 25vw;
+        max-width: 25vw;
+
+        height: 35vw;
+        max-height: 35vw;
+
+        color: black;
+        text-decoration: none;
+    }
+
+    .empleado img {
+        width: 17.5vw;
+        height: 17.5vw;
+
+        margin: 3.25vw;
+        margin-bottom: 0;
+    }
+
+    .empleado span {
+        height: 15vw;
+
+        margin: 0;
+
+        font-size: 2vh;
+    }
+}</style><style type="text/css" data-vite-dev-id="D:/Escritorio/Fate-Umbrella.ver/0 Fate Umbrella.ver Web/Fate Umbrella.ver/src/instances/06 empresa/components/02 quienesSomos/QuienesSomos.css">/* QUIENES SOMOS */
+
+.quienesSomos {
+    width: 100%;
+    height: auto;
+
+    background-image: url(../../../imgs/Home/FondoRepeat.png);
+    background-repeat: repeat;
+    background-size: 50px;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+
+.quienesSomos img {
+    width: 40vh;
+}
+
+.contenedorQuienesSomos {
+    width: auto;
+
+    margin: 5vh 0;
+}
+
+.contenedorQuienesSomos h2 {
+    font-size: 4em;
+    margin: 5vh 0;
+
+    font-weight: normal;
+}
+
+.contenedorQuienesSomos p {
+    width: 60vw;
+
+    margin: 5vh 10vh;
+    font-size: 1.8em;
+    text-align: justify;
+
+    font-weight: lighter;
+}
+
+.imagenSaber {
+    height: 40vh;
+    width: 40vw;
+
+    background-image: url(/imgs/Empresa/SaberChibi.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    transition: 0.5s ease;
+}
+
+.imagenSaber:hover {
+    background-image: url(/imgs/Empresa/SaberChibiHover.png);
+    transition: 0.5s ease;
+}
+
+@media (orientation: portrait) {
+    .quienesSomos {
+        flex-direction: column;
+
+        padding-bottom: 5vh;
+    }
+
+    .contenedorQuienesSomos {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 5vh;
+    }
+
+    .contenedorQuienesSomos h2 {
+        width: 100%;
+
+        text-align: center;
+        font-size: 5vh;
+
+        margin: 0;
+    }
+
+    .contenedorQuienesSomos p {
+        font-size: 2.5vh;
+        font-weight: normal;
+        text-indent: 5vh;
+
+        width: 80vw;
+    
+        margin: 0;
+    }
+
+    .imagenSaber {
+        width: 80vw;
+    }
+}</style><style type="text/css" data-vite-dev-id="D:/Escritorio/Fate-Umbrella.ver/0 Fate Umbrella.ver Web/Fate Umbrella.ver/src/instances/06 empresa/components/03 misionVision/MisionVision.css">.misionVision {
+    width: 100%;
+    height: auto;
+
+    background-image: url(../../../imgs/Empresa/FondoMV.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-top: 3px solid #C9A740;
+    border-bottom: 3px solid #C9A740;
+}
+
+.contenedorMisionVision {
+    height: 100%;
+    width: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.separadorMV {
+    height: 80vh;
+    width: 3px;
+
+    background: linear-gradient(180deg, #F8E18F, #C9A740);
+    filter: drop-shadow(0px 0px 8px rgba(255, 215, 100, 0.4));
+
+    margin: 2.5vh 2.5vw;
+}
+
+.mision, .vision {
+    width: 40vw;
+    height: auto;
+
+    transition: 0.5s ease;
+
+    user-select: none;
+}
+
+.imgContainer {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mision img, .vision img {
+    width: 20vw;
+
+    margin: 5vh 0;
+
+    filter: drop-shadow(0 0 8px rgba(255, 215, 100, 0.4));
+}
+
+.mision:hover, .vision:hover {
+    transform: translateY(-5px);
+}
+
+.mision h2, .vision h2 {
+    background: linear-gradient(180deg, #F8E18F, #C9A740);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 8px rgba(255, 215, 100, 0.4);
+
+    font-size: 7.5vh;
+
+    width: 100%;
+
+    margin-top: 10vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mision p, .vision p {
+    background: linear-gradient(180deg, #F8E18F, #C9A740);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 8px rgba(255, 215, 100, 0.4);
+
+    height: 70%;
+    padding: 0 10vh;
+
+    margin-bottom: 10vh;
+
+    font-size: 3vh;
+    line-height: 4vh;
+
+    text-align: center;
+}
+
+@media (orientation: portrait) {
+    .contenedorMisionVision {
+        flex-direction: column;
+    }
+
+    .mision,
+    .vision {
+        width: 90vw;
+        height: auto;
+    }
+
+    .mision h2,
+    .vision h2 {
+        margin-top: 5vh;
+    }
+
+    .imgContainer img{
+        width: 90%;
+        margin: 2.5vh 0;
+    }
+
+    .mision p,
+    .vision p {
+        padding: 0;
+        width: 100%;
+
+        font-size: 2.5vh;
+        line-height: 2.75vh;
+
+        margin-bottom: 5vh;
+    }
+    .separadorMV {
+        height: 3px;
+        width: 80vw;
+    }
+}</style><style type="text/css" data-vite-dev-id="D:/Escritorio/Fate-Umbrella.ver/0 Fate Umbrella.ver Web/Fate Umbrella.ver/src/instances/06 empresa/components/04 valores/Valores.css">/* VALORES */
+
+.valores {
+    width: 100%;
+    height: auto;
+
+    background-image: url(../../../imgs/Home/FondoRepeat.png);
+    background-repeat: repeat;
+    background-size: 50px;
+    background-position: center;
+
+    display: flex;
+    align-items: start;
+    justify-content: center;
+
+    user-select: none;
+    padding-bottom: 2.5vh;
+}
+
+.contenedorValores {
+    width: 100%;
+
+    overflow: hidden;
+    position: relative;
+
+}
+
+.contenedorValores h2 {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 4em;
+    margin: 5vh 0;
+
+    font-weight: normal;
+}
+
+.contenedorTarjetas {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+}
+
+.tarjetaValor {
+    width: 20vw;
+    height: auto;
+
+    border: 1px solid lightgray;
+    border-radius: 2.5vh;
+
+    background-color: white;
+
+    padding: 2.5vh;
+    margin: 2.5vh;
+
+    filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.253));
+
+    transition: 0.3s ease;
+}
+
+.tarjetaValor h3 {
+    width: 100%;
+    text-align: center;
+    font-size: 3vh;
+
+    margin-bottom: 5vh;
+}
+
+.tarjetaValor p {
+    width: 100%;
+    text-align: center;
+    font-size: 2.75vh;
+}
+
+.tarjetaValor:hover {
+    transform: translateY(-5px);
+    filter: drop-shadow(0px 5px 0px rgba(0, 0, 0, 0.253)) drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.253));
+}
+
+@media (orientation: portrait) {
+    .contenedorValores h2 {
+        text-align: center;
+        font-size: 5vh;
+    }
+
+    .contenedorTarjetas {
+        flex-direction: column;
+    }
+
+    .tarjetaValor {
+        width: 70vw;
+    }
+
+    .tarjetaValor h3 {
+        font-size: 2.75vh;
+        margin-bottom: 2.5vh;
+    }
+
+    .tarjetaValor p {
+        font-size: 2.25vh;
+    }
+}</style><style type="text/css" data-vite-dev-id="D:/Escritorio/Fate-Umbrella.ver/0 Fate Umbrella.ver Web/Fate Umbrella.ver/src/instances/06 empresa/components/05 reclutamiento/Reclutamiento.css">/* RECLUTAMIENTO */
+
+.reclutamiento {
+    user-select: none;
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url(../../../imgs/Empresa/PuertasCamelotNoche.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    border-top: rgb(255, 215, 100) 2px solid;
+    border-bottom: rgb(255, 215, 100) 2px solid;
+}
+
+.contenedorReclutamiento {
+    width: 70%;
+    height: auto;
+}
+
+.contenedorImgReclutamiento {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedorReclutamiento img {
+    width: 40vw;
+    filter: drop-shadow(0px 0px 8px rgba(255, 215, 100, 0.4));
+
+    margin: 7.5vh 0;
+}
+
+.contenedorReclutamiento h3 {
+    font-size: 5em;
+    font-weight: normal;
+
+    text-align: center;
+
+    background: linear-gradient(180deg, #F8E18F, #C9A740);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 8px rgba(255, 215, 100, 0.4);
+
+    filter: drop-shadow(0px 0px 10px black);
+
+    margin-bottom: 5vh;
+}
+
+.contenedorButtonReclutamiento {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedorButtonReclutamiento a {
+    padding: 4vh 6.5vh;
+
+    border: 1px solid goldenrod; 
+    border-radius: 10vh;
+
+    color: rgb(49, 41, 12); 
+
+    text-decoration: none; 
+    font-size: 2em;
+    font-weight: bold; 
+
+    background: linear-gradient(135deg, #F8E18F, #C9A740, #fff3b0); 
+    background-size: 200%; box-shadow: 0 4px 10px rgba(255, 215, 0, 0.4); 
+    
+    transition: background-position 0.6s ease, transform 0.3s, border 0.3s;
+}
+
+.contenedorButtonReclutamiento a:hover {
+    cursor: pointer;
+
+    box-shadow: 0 4px 10px rgba(139, 119, 0, 0.575); 
+    border: 1px solid rgb(255, 225, 119); 
+    transform: scale(1.025); 
+    background-position: right center;
+}
+
+.invertidoVertical {
+    transform: scaleY(-1);
+}
+
+@media (orientation: portrait) {
+    .contenedorReclutamiento {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contenedorImgReclutamiento img {
+        margin: 7.5vh 0;
+
+        width: 90%;
+    }
+
+    .contenedorReclutamiento h3 {
+        width: 80%;
+        font-size: 4.5vh;
+    }
+
+    .contenedorButtonReclutamiento {
+        width: auto;
+        height: auto;
+    }
+
+    .contenedorButtonReclutamiento a {
+        text-align: center;
+
+        max-width: 90vw;
+
+        font-size: 2.75vh;
+        padding: 2.5vh 4.5vh;
+    }
+}</style><style type="text/css" data-vite-dev-id="D:/Escritorio/Fate-Umbrella.ver/0 Fate Umbrella.ver Web/Fate Umbrella.ver/src/instances/08 versionado/Versionado.css">@font-face {
+  font-family: 'Rosie Brown';
+  src: url('/src/assets/RosieBrown.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.versionadoExtenso {
+    width: 100%;
+    height: auto;
+
+    background-image: url(/imgs/Home/FondoRepeat.png);
+    background-size: 50px;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+.tituloPrincipalVersionado {
+    width: 100%;
+    height: auto;
+
+    user-select: none;
+
+    padding: 5vh 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tituloPrincipalVersionado img {
+    height: 8vh;
+}
+
+.tituloPrincipalVersionado span {
+    font-family: 'Rosie Brown';
+    font-weight: bold;
+
+    margin: 0 2.5vh;
+    
+    height: 8vh;
+    font-size: 8vh;
+    line-height: 9  vh;
+
+    transition: 0.5s ease;
+}
+
+.tituloPrincipalVersionado:hover span {
+    margin: 0 5vh;
+    transform: scale(1.02);
+}
+
+.invertidoHorizontal {
+    transform: scaleX(-1);
+}
+
+.contenedorVersionadoExtenso {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+/* LISTA VERSIONADO */
+
+.listaVersionesExtenso {
+    width: auto;
+    height: 75vh;
+
+    margin: 2.5vh 5vh 0 0 ;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.listaVersionesExtenso::-webkit-scrollbar {
+    display: none;
+}
+
+.listaVersionesExtenso a {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+
+    height: 3vh;
+}
+
+.listaVersionesExtenso a span{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+
+    width: 100%;
+}
+
+.opcionVersionadoExtenso {
+    display: flex;
+    
+    align-items: center;
+    justify-content: left;
+
+    padding: 1.5vh;
+    margin: 1.5vh;
+
+    background-color: white;
+
+    border: 1px solid lightgray;
+    border-radius: 0.5vh;
+
+    transition: 0.3s ease;
+}
+
+.opcionVersionadoExtenso:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.opcionVersionadoExtenso:has(input[type="radio"]:checked) {
+    border: 1px solid black;
+}
+
+.opcionVersionadoExtenso:has(input[type="radio"]:checked) .imgSelectorExtenso {
+    background-image: url(/imgs/Home/Versionado/SelectorEncendido.png);
+    background-size: contain;
+    background-position: center;
+}
+
+.opcionVersionadoExtenso input[type="radio"] {
+    display: none;
+}
+
+.imgSelectorExtenso {
+    width: 3vh;
+    height: 3vh;
+    
+    margin-right: 1vh;
+
+    background-image: url(/imgs/Home/Versionado/SelectorApagado.png);
+    background-size: contain;
+    background-position: center;
+
+    transition: 0.3s ease;
+}
+
+/* CHANGELOG VERSIONADO */
+
+.tituloVersionado {
+    width: 100%;
+    height: auto;
+
+    user-select: none;
+
+    margin: 5vh 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tituloVersionado img {
+    height: 5vh;
+}
+
+.tituloVersionado span {
+    font-family: 'Rosie Brown';
+    font-weight: bold;
+
+    margin: 0 2.5vh;
+    
+    height: 5vh;
+    font-size: 5vh;
+    line-height: 5.75vh;
+
+    transition: 0.5s ease;
+}
+
+.tituloVersionado:hover span {
+    margin: 0 5vh;
+    transform: scale(1.02);
+}
+
+.changelogVersionExtenso {
+    width: 60vw;
+
+    padding: 2.5vh;
+
+    background-color: white;
+
+    border: 1px solid black;
+}
+
+.changelogVersionExtenso h1 {
+    font-size: 5vh;
+    line-height: 5vh;
+    margin: 5vh 0;
+
+    transition: 0.5s ease;
+}
+
+.changelogVersionExtenso h1:hover {
+    margin: 5vh 2.5vh;
+}
+
+.changelogVersionExtenso h1 img {
+    height: 5vh;
+}
+
+.changelogVersionExtenso h2 {
+    font-size: 3.5vh;
+    margin: 3vh 5vh;
+}
+
+.changelogVersionExtenso h3 {
+    font-size: 2vh;
+    margin: 3vh 5vh;
+}
+
+.changelogVersionExtenso .textoVCentrado {
+    text-align: center;
+}
+
+.changelogVersionExtenso li {
+    margin: 0 5vh;
+}
+
+.changelogVersionExtenso li p {
+    margin: 1vh 0;
+}
+
+.changelogVersionExtenso p {
+    margin: 1vh 5vh;
+    text-align: justify;
+}
+
+.changelogVersionExtenso .imagenChangelog h3 {
+    text-align: center;
+}
+
+.changelogVersionExtenso .imagenChangelog .imgChangelog {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.changelogVersionExtenso .imagenChangelog img {
+    border: 1px solid black;
+
+    width: 30vw;
+    max-width: 60%;
+}
+
+.changelogVersionExtenso .sangria {
+    text-indent: 5vh;
+}
+
+.contenedorNotasDev {
+    width: 100%;
+    height: auto;
+
+    margin-bottom: 2.5vh;
+}
+
+.contenidoNotasDev {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+.izqNotasDev {
+    width: 50%;
+}
+
+.izqNotasDev p {
+    margin: 0 2.5vh 2.5vh;
+    font-size: 1.2em;
+}
+
+.derNotasDev {
+    width: 40%;
+}
+
+.derNotasDev img {
+    width: 100%;
+}
+
+.derNotasDev p {
+    width: 100%;
+    text-align: center;
+    margin: 1vh 0;
+}
+
+/* VOLVER ARRIBA */
+
+.contenedorVolverArriba {
+    width: 100%;
+    height: 20vh;
+
+    padding: 5vh 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedorVolverArriba button {
+    padding: 3.5vh 7.5vh;
+    margin: 0 5vh;
+    
+    font-size: 5vh;
+
+    border: 1px solid black;
+    border-radius: 10vh;
+
+    transition: 0.5s ease;
+}
+
+.contenedorVolverArriba button:hover {
+    cursor: pointer;
+
+    transform: scale(1.025);
+    filter: drop-shadow(0px 0px 5px black);
+
+    margin: 0 10vh;
+}
+
+.contenedorVolverArriba img {
+    margin-top: 1vh;
+    height: 15vh;
+}</style><style type="text/css" data-vite-dev-id="D:/Escritorio/Fate-Umbrella.ver/0 Fate Umbrella.ver Web/Fate Umbrella.ver/src/instances/10 verificacion/Verificacion.css">.verificacion {
+    width: 100%;
+    height: 92.5vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url(/imgs/Home/FondoRepeat.png);
+    background-size: 50px;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+.mensajes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mensajes p {
+    margin-top: 3vh;
+    width: 80%;
+    text-align: center;
+}</style></head>
+  <body>
+    <div id="root"><header><div class="contenedorHeaderDesktop"><div class="links"><a href="http://192.168.0.40:5173/">Home</a><a href="http://192.168.0.40:5173/login">Login</a><a href="http://192.168.0.40:5173/verify/388e53c7cbc45caedfd9b5744be3ff632ad90692191e7bf1">Guide</a><a href="http://192.168.0.40:5173/download">Download</a></div><div class="logo"><img alt="" src="./Fate_Umbrella.ver_files/Logo.png"></div><div class="links"><a href="http://192.168.0.40:5173/empresa">Company</a><a href="http://192.168.0.40:5173/register">Register</a><a href="https://x.com/ItzAgus386" target="_blank">Twitter</a><a href="http://192.168.0.40:5173/verify/388e53c7cbc45caedfd9b5744be3ff632ad90692191e7bf1">Facebook</a></div></div><div class="contenedorHeaderMobile"><div class="logoJuegoMobile"><a href="http://192.168.0.40:5173/"><img alt="" src="./Fate_Umbrella.ver_files/Logo5.png"></a></div><div class="menuHamburguesa borgir"></div></div><div class="menuDesplegable "><nav class="linksMobile"><a href="http://192.168.0.40:5173/" class="" style="animation-delay: 0s;">Home</a><a href="http://192.168.0.40:5173/login" class="" style="animation-delay: 0.15s;">Login</a><a href="http://192.168.0.40:5173/verify/388e53c7cbc45caedfd9b5744be3ff632ad90692191e7bf1" class="" style="animation-delay: 0.3s;">Guide</a><a href="http://192.168.0.40:5173/empresa" class="" style="animation-delay: 0.45s;">Company</a><a href="http://192.168.0.40:5173/register" class="" style="animation-delay: 0.6s;">Register</a><a href="https://x.com/ItzAgus386" target="_blank" class="" style="animation-delay: 0.75s;">Twitter</a><a href="http://192.168.0.40:5173/verify/388e53c7cbc45caedfd9b5744be3ff632ad90692191e7bf1" class="" style="animation-delay: 0.9s;">Facebook</a></nav></div></header><div class="espaciadorHeader" id="principio"></div><section class="verificacion"><div class="mensajes"><h1>Cuenta verificada correctamente</h1><p>Si fuiste redirigido: Esperarás a ser llevado a iniciar sesión.</p></div></section><footer><div class="contenedorFooter"><div class="devs"><div class="contenedorDevs"><div class="dev"><a href="https://github.com/izruru" target="_blank" class="devImg"><img alt="" src="./Fate_Umbrella.ver_files/Lucas.jpg"></a><a href="https://github.com/izruru" target="_blank" class="devText"><p>Izuru</p></a></div><div class="dev"><a href="https://www.youtube.com/@Aquwus" target="_blank" class="devImg"><img alt="" src="./Fate_Umbrella.ver_files/Agustin.jpg"></a><a href="https://www.youtube.com/@Aquwus" target="_blank" class="devText"><p>Aquwus</p></a></div></div></div><div class="copyright"><div class="contenedorCopyright"><div class="copyImg"><img alt="" src="./Fate_Umbrella.ver_files/Logo5(1).png"></div><div class="copyText"><p>Todo contenido oficial es derecho de Type/Moon</p><p>Copyright de Animeplex</p></div></div></div><div class="legal"><div class="legalText"><a href="http://192.168.0.40:5173/empresa">Sobre Nosotros</a><a href="http://192.168.0.40:5173/verify/388e53c7cbc45caedfd9b5744be3ff632ad90692191e7bf1#">Terminos y Condiciones</a><a href="http://192.168.0.40:5173/verify/388e53c7cbc45caedfd9b5744be3ff632ad90692191e7bf1#">Aviso Legal</a><p>Esto es un Fangame. Respeto.</p></div></div></div></footer></div>
+    <script type="module" src="./Fate_Umbrella.ver_files/main.tsx"></script>
+  
+
+<div id="give-freely-root-ejkiikneibegknkgimmihdpcbcedgmpo" class="give-freely-root" data-extension-id="ejkiikneibegknkgimmihdpcbcedgmpo" data-extension-name="Volume Booster" style="display: block;"><template shadowrootmode="open"><style>
+  :host {
+    all: initial;
+  }
+
+  .gf-scroll-remove::-webkit-scrollbar {
+    border-radius-bottom-right: 15px;
+  }
+
+  button {
+    cursor: pointer;
+    transition: transform 0.1s ease;
+  }
+
+  button:active {
+    transform: scale(0.98);
+  }
+
+  .give-freely-close-button:hover {
+    opacity: 0.7;
+  }
+
+  input[type="radio"] {
+    margin-right: 8px;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid #e5e5e5;
+    margin: 1em 0;
+  }
+
+  @media (max-width: 600px), (max-height: 480px) {
+    #give-freely-checkout-popup {
+      display: none !important;
+    }
+  }
+</style><div><div class="gf-app"></div></div></template></div></body></html>
